@@ -6,6 +6,8 @@ html{
     overflow-x: hidden;
 }
 
+/* header */
+
 .head {
     width: 100%;
     height: 90vh;
@@ -53,6 +55,8 @@ html{
     margin-right: 20px;
     color: white;
 }
+
+/* content */
 
 .box {
     color: black;
@@ -112,4 +116,75 @@ html{
 .box_content a:hover {
     color: white !important;
     background-color: #333333;
+    transition: 0.5s;
+}
+
+/* about */
+
+.about {
+    width: 90%;
+    line-height: 2em;
+}
+.about p:nth-child(1) {
+    font-size: 2em;
+    font-weight: 500;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.about p:nth-child(2) {
+    font-size: 1em;
+    font-weight: 400;
+    padding-left: 100px;
+}
+
+/* attend */
+
+.attend p:nth-child(1) {
+    font-size: 2em;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-left: 100px;
+}
+
+.who a {
+    position: relative;
+    font-size: 1.25em;
+    color: #333333;
+    padding-bottom: 10px;
+}
+
+.who i {
+    height: 0px;
+    margin-top: 13px;
+}
+.att_row {
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+
+.who {
+    width: 100%;
+    border-bottom: 2px solid #333333;
+    display: flex;
+    justify-content: space-between; 
+    cursor: pointer; 
+    margin-right: 50px;  
+}
+
+.who:hover {
+    border-bottom: 2px solid #e5e8ea;
+    transition: 0.3s;
+}
+
+.hover_content {
+    display: none;
+    font-size: 0.55em;
+    font-weight: 400;
+}
+
+.hover_content p {
+    
 }

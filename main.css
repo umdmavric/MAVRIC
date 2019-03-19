@@ -50,7 +50,7 @@ html{
 }
 
 .links a {
-    margin-right: 5px;
+    margin-right: 20px;
     color: white;
 }
 
@@ -64,17 +64,52 @@ html{
     display: flex;
 }
 
+.left {
+    background-color: #EFF1F3;
+}
+
+.right {
+    background-color: #e5e8ea; 
+}
 .circle {
     background-color: #333333;
     border-radius: 50%;
     width: 45px;
     height: 45px;
     margin-left: 150px;
+    margin-top: 10px;
 }
 
 .box_content {
     padding-left: 30px;
 }
-.box_content p:nth-child(2){
+.box_content p {
+    margin-bottom: 15px;
+}
+
+.box_content p:nth-child(1) {
+    font-weight: 500;
+}
+
+.box_content p:nth-child(2) {
     font-size: 0.65em;
+}
+
+.circle {
+    text-align: center;
+}
+
+.circle i {
+    color: white;
+    position: relative;
+    top: 4px;
+}
+
+.box_content a {
+    margin-top: 10px;
+}
+
+.box_content a:hover {
+    color: white !important;
+    background-color: #333333;
 }

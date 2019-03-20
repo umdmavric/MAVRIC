@@ -6,18 +6,19 @@ console.log(screen.height)
 let content = document.querySelectorAll('.who');
 console.log(content)
 
+let hidden = document.querySelectorAll('.hover_content');
+console.log(hidden)
 let check = true;
 
-content.forEach((elm) => {
-    elm.addEventListener("click",()=>{
-        let hidden = (elm.childNodes[5]);
+for(let i =0;i<content.length;i++) {
+    content[i].addEventListener("click",()=>{
         if (check) {
-            hidden.style.display = "block";
+            hidden[i].style.display = "block";
             check = false;
         }    
         else {
-            hidden.style.display = "none";
+            hidden[i].style.display = "none";
             check = true;
         }      
     })
-})
+}

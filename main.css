@@ -159,7 +159,6 @@ html{
     margin-top: 13px;
 }
 .att_row {
-    display: flex;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 50px;
@@ -176,15 +175,29 @@ html{
 
 .who:hover {
     border-bottom: 2px solid #e5e8ea;
-    transition: 0.3s;
+    transition: 0.3s ease-in;
 }
 
-.hover_content {
+.con_l {
     display: none;
     font-size: 0.55em;
     font-weight: 400;
+    max-width: 70%;
+    margin-left: 210px;
+    margin-top: 20px;
 }
 
-.hover_content p {
-    
+.con_r {
+    display: none;
+    font-size: 0.55em;
+    font-weight: 400;
+    max-width: 70%;
+    margin-top: 20px;
 }
+
+
+.con_l > p, .con_r > p{
+    font-size: 1.5em !important;
+    padding: 0 !important;
+}
+

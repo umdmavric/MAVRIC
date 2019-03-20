@@ -201,3 +201,103 @@ html{
     padding: 0 !important;
 }
 
+/* prices */
+
+.prices {
+    margin-top: 50px;
+    height: 600px;
+    max-width: 100%;
+    background-color: #EFF1F3;
+}
+
+.prices > p {
+    font-size: 2em;
+    font-weight: 500;
+    padding-top: 35px;
+    padding-left: 100px;
+}
+
+.rows {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    text-align: center;
+    background-color: white;
+    width: 250px;
+    height: 400px;
+    margin: 50px 30px 0 30px;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.early {
+    margin-top: 40px;
+}
+
+.onsite {
+    margin-top: 60px;
+}
+
+.early a {
+    margin-top: 20px;
+}
+
+.onsite a {
+    margin-top: 20px;
+}
+
+.early > p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.early > a:hover {
+    background-color: #48B280;
+    color: white !important;
+}
+
+.onsite > p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.onsite > a:hover {
+    background-color: #48B280;
+    color: white !important;    
+}
+.cards:hover {
+	-webkit-animation: shadow-drop-2-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: shadow-drop-2-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes shadow-drop-2-bottom {
+    0% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translateZ(50px) translateY(-12px);
+        transform: translateZ(50px) translateY(-12px);
+        box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+    }
+  }
+  @keyframes shadow-drop-2-bottom {
+    0% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translateZ(50px) translateY(-12px);
+        transform: translateZ(50px) translateY(-12px);
+        box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+    }
+  }
+  

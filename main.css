@@ -299,3 +299,26 @@ html{
     }
   }
   
+  /* sponsor */
+
+  .sponsor p:nth-child(1) {
+    font-size: 2em;
+    font-weight: 500;
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+
+  .sponsor p:nth-child(2) {
+    font-size: 1em;
+    font-weight: 400;
+    padding-left: 100px;
+    width: 90%;
+  }
+
+  .sponsor .row .col p {
+      font-size:1.25em;
+  }
+
+  .sponsor .row .col ul {
+      margin-left: 100px;
+  }

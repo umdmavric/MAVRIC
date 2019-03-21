@@ -1,0 +1,37 @@
+import jump from 'jump.js'
+
+let head = document.querySelector('.head');
+head.style.height = screen.height/2;
+console.log(screen.height)
+
+let content = document.querySelectorAll('.who');
+console.log(content)
+
+let hidden = document.querySelectorAll('.hover_content');
+console.log(hidden)
+let check = true;
+
+for(let i =0;i<content.length;i++) {
+    content[i].addEventListener("click",()=>{
+        if (check) {
+            hidden[i].style.display = "block";
+            check = false;
+        }    
+        else {
+            hidden[i].style.display = "none";
+            check = true;
+        }      
+    })
+}
+
+let nav = document.querySelector('.links');
+console.log(nav.children);
+for (let i = 0;i<nav.children.length;i++) {
+    nav.children[i].addEventListener("click",()=>{
+        console.log(nav.children[i].innerHTML)
+        if(nav.children[i].innerHTML == "About")
+            jump('.about')
+        if(nav.children[i].innerHTML == "Prices")
+            jump('.prices')
+    })
+}

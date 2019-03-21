@@ -1,0 +1,23 @@
+{
+  "name": "MAVRIC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify script.js -p esmify > bundle.js",
+    "watch": "watchify script.js -p esmify -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-resolve": "^1.11.3",
+    "jump.js": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "babelify": "^10.0.0",
+    "esmify": "^2.1.1"
+  }
+}

@@ -234,43 +234,41 @@ html{
     cursor: pointer;
 }
 
+.cards a {
+    margin-top: 25px;
+}
 .early {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .onsite {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .early a {
     margin-top: 20px;
+    font-size: 2.5em;
+    color: #666666 !important;
 }
 
 .onsite a {
     margin-top: 20px;
+    font-size: 2.5em;
+    color: #666666 !important;
 }
 
 .early > p {
     margin-top: 10px;
-    font-size: 1.5em;
+    font-size: 0.85em;
     margin-bottom: 0;
-}
-
-.early > a:hover {
-    background-color: #48B280;
-    color: white !important;
 }
 
 .onsite > p {
     margin-top: 10px;
-    font-size: 1.5em;
+    font-size: 0.85em;
     margin-bottom: 0;
 }
 
-.onsite > a:hover {
-    background-color: #48B280;
-    color: white !important;    
-}
 .cards:hover {
 	-webkit-animation: shadow-drop-2-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: shadow-drop-2-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

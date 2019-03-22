@@ -203,6 +203,17 @@ for (let i = 0; i < nav.children.length; i++) {
   });
 }
 
+let nav2 = document.querySelector('.mob_links');
+console.log(nav2.children);
+
+for (let i = 0; i < nav2.children.length; i++) {
+  nav2.children[i].addEventListener("click", () => {
+    console.log(nav2.children[i].innerHTML);
+    if (nav2.children[i].innerHTML == "About") (0, _jump.default)('.about');
+    if (nav2.children[i].innerHTML == "Prices") (0, _jump.default)('.prices');
+  });
+}
+
 let hamburger = document.querySelector('.hamburger');
 console.log(hamburger);
 let hcheck = true;

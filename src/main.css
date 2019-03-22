@@ -383,7 +383,7 @@ a {
         margin-right: 0;
     }
 
-    .nav-center {
+    .big {
         display: none;
     }
     
@@ -391,6 +391,20 @@ a {
         display: flex;
         justify-content: flex-end;
         -webkit-box-pack: end;
+    }
+
+    .small {
+        height: 0;
+    }
+    .mob_links {
+        height: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mob_links a {
+        color: white;
+        margin-top: 20px;
     }
     
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {

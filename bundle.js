@@ -203,4 +203,18 @@ for (let i = 0; i < nav.children.length; i++) {
   });
 }
 
+let hamburger = document.querySelector('.hamburger');
+console.log(hamburger);
+let hcheck = true;
+hamburger.addEventListener("click", () => {
+  if (hcheck) {
+    hamburger.className += " is-active";
+    hcheck = false;
+    console.log(hcheck);
+  } else {
+    hamburger.className = "hamburger hamburger--spin";
+    hcheck = true;
+  }
+});
+
 },{"jump.js":1}]},{},[2]);

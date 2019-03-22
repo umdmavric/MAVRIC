@@ -56,6 +56,10 @@ a {
     margin: 0 auto;
 }
 
+.nav-right {
+    display: none;
+}
+
 .links a {
     margin-right: 20px;
     color: white;
@@ -359,4 +363,122 @@ a {
 
   .social i {
       margin-right: 20px;
+  }
+
+  /* media queries */
+
+  @media (min-width: 300px) and (max-width: 768px) {
+    .nav-center {
+        display: none;
+    }
+    
+    .nav-right {
+        display: flex;
+        justify-content: flex-end;
+        -webkit-box-pack: end;
+    }
+    
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        background-color: white !important;
+        width: 30px !important;
+    }
+
+    .hamburger-box {
+        width: 30px !important;
+        height: 14px !important;
+    }
+
+    .box {
+        padding-top: 20px;
+    }
+    
+    .circle {
+        margin-left: 40px;
+    }
+
+    .box_content {
+        margin-right: 30px;
+    }
+
+    .about p:nth-child(1) {
+        padding-left: 40px;
+    }
+
+    .about p:nth-child(2) {
+        padding-left: 40px;
+    }
+
+    .attend p:nth-child(1) {
+        padding-left: 40px;
+    }
+
+    .att_row {
+        margin: 0 0 0 40px;
+    }
+
+    .con_l, .con_r {
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+
+    .prices > p {
+        padding-left: 40px;
+    }
+
+    .prices {
+        height: 100%;
+        padding-bottom: 40px
+    }
+
+    .rows {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .cover {
+        display: flex;
+        justify-content: center;
+    }
+
+    .early {
+        margin-right: 50%;
+    }
+    
+    .cards {
+        height: 200px;
+        width: 90%;
+    }
+
+    .early, .onsite {
+        margin-top: 0;
+    }
+
+    .early a, .onsite a {
+        font-size: 1em;
+    }
+
+    .cards a {
+        margin: 0;
+    }
+
+    .sponsor p:nth-child(1) {
+        padding-left: 40px;
+    }
+
+    .sponsor p:nth-child(2) {
+        padding-left: 40px;
+    }
+
+    .sponsor .row .col ul {
+        margin-left: 40px
+    }
+
+    .foot1 {
+        left:20px;
+    }
+
+    .foot2 {
+        right: 0px;
+    }
+
   }

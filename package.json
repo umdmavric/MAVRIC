@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify script.js -p esmify > bundle.js",
-    "watch": "watchify script.js -p esmify -o bundle.js"
+    "build": "browserify src/script.js -p esmify > bundle.js",
+    "watch": "watchify src/script.js -p esmify -o bundle.js"
   },
   "author": "",
   "license": "ISC",

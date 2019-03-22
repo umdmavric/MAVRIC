@@ -1,6 +1,6 @@
 @import url(chota.css);
 
-html{
+html {
     height: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -344,21 +344,29 @@ a {
 
   .foots {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
   }
 
-  .foot1 {
+  /* .foot1 {
     position: relative;
     left: 350px;
+  } */
+
+  .foot1 {
+    margin-right: 20%;
   }
 
   .address a {
       color: white !important;
   }
 
-  .foot2 {
+  /* .foot2 {
       position: relative;
       right: 350px;
+  } */
+
+  .foot2 {
+    margin-left: 20%;
   }
 
   .social i {
@@ -368,6 +376,13 @@ a {
   /* media queries */
 
   @media (min-width: 300px) and (max-width: 768px) {
+    
+    .row {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .nav-center {
         display: none;
     }
@@ -473,11 +488,22 @@ a {
         margin-left: 40px
     }
 
+    .foots {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .foot1 {
+        position: relative;
         left:20px;
+        margin: 0;
     }
 
     .foot2 {
+        position: relative;
+        margin: 0;
+        top: 20px;
         right: 0px;
     }
 

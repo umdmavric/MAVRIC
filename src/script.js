@@ -63,3 +63,12 @@ hamburger.addEventListener("click",()=>{
     }
     
 })
+
+let sub = document.querySelector('.subscribe');
+
+window.addEventListener("scroll", function (event) {
+    let scroll = this.scrollY;
+    if(scroll >= 1500 && scroll <= 2100) {
+        sub.style.visibility = "visible";
+    }
+});

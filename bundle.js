@@ -227,5 +227,13 @@ hamburger.addEventListener("click", () => {
     hcheck = true;
   }
 });
+let sub = document.querySelector('.subscribe');
+window.addEventListener("scroll", function (event) {
+  let scroll = this.scrollY;
+
+  if (scroll >= 1500 && scroll <= 2100) {
+    sub.style.visibility = "visible";
+  }
+});
 
 },{"jump.js":1}]},{},[2]);

@@ -424,7 +424,7 @@ a {
     }
 
     .mob_links {
-        height: 90%;
+        height: 100%;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -450,7 +450,7 @@ a {
     .hamburger {
         z-index: 4;
     }
-    
+
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
         background-color: white !important;
         width: 30px !important;

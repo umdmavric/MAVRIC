@@ -217,13 +217,17 @@ for (let i = 0; i < nav2.children.length; i++) {
 let hamburger = document.querySelector('.hamburger');
 console.log(hamburger);
 let hcheck = true;
+let nav_mob = document.querySelector('.small');
+console.log(nav_mob);
 hamburger.addEventListener("click", () => {
   if (hcheck) {
     hamburger.className += " is-active";
     hcheck = false;
     console.log(hcheck);
+    nav_mob.className += " small_active";
   } else {
     hamburger.className = "hamburger hamburger--spin";
+    nav_mob.className += "small";
     hcheck = true;
   }
 });

@@ -420,18 +420,35 @@ a {
     }
 
     .small {
-        height: 0;
+        height: 100%;
     }
 
     .mob_links {
-        height: 0;
+        height: 90%;
+        position: absolute;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #333333;
+        z-index: 2;
+        margin: 0;
+        right: 0;
+        opacity: 0.99;
+    }
+
+    .small_active {
+        display: block;
     }
 
     .mob_links a {
         color: white;
         margin-top: 20px;
+    }
+    
+    .hamburger {
+        z-index: 4;
     }
     
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {

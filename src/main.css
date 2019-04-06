@@ -136,6 +136,11 @@ a {
     width: 90%;
     line-height: 2em;
 }
+
+.about a {
+    color: #666666 !important;
+}
+
 .about p:nth-child(1) {
     font-size: 2em;
     font-weight: 500;

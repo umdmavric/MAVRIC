@@ -673,3 +673,12 @@ a {
 
   }
  
+@media (min-width:1200px) and (max-width: 1600px) {
+    .circle {
+        margin-left: 100px;
+    }
+
+    .box_content p:nth-child(2) {
+        max-width:500px;
+    }
+}

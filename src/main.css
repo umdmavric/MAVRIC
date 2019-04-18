@@ -70,7 +70,7 @@ a {
 .box {
     color: black;
     background-color:  #EFF1F3;
-    height: 250px;
+    height: 275px;
     margin: 0;
     padding-top: 50px;
     font-size: 1.5em;
@@ -108,6 +108,7 @@ a {
 
 .box_content p:nth-child(2) {
     font-size: 0.65em;
+    height: 200px;
 }
 
 .circle {

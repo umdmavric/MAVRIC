@@ -108,7 +108,10 @@ a {
 
 .box_content p:nth-child(2) {
     font-size: 0.65em;
-    height: 100px;
+}
+
+#second-p {
+    height: 73px;
 }
 
 .circle {
@@ -469,8 +472,13 @@ a {
 
     .box {
         padding-top: 20px;
+        height: 400px;
     }
     
+    #second-p {
+        height: inherit;
+    }
+
     .circle {
         margin-left: 40px;
     }

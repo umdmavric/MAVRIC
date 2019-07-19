@@ -15,6 +15,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.js"></script>
     <link rel="shortcut icon" type="image/png" href="./assets/images/social_media_IcI_icon.ico"/>
     <script type="text/javascript" src="./bundle.js" async></script>
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"3370d950051c69475e7539755","lid":"e0c7f605d5","uniqueMethods":true}) })</script>
+    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+    <noscript><a href="https://www.eventbrite.ca/e/2019-mavric-conference-tickets-65832927057" rel="noopener noreferrer" target="_blank"></noscript>
 </head>
 <body>
     <section class="head">
@@ -26,6 +29,7 @@
                         <div class="tabs links">
                             <a href = "#">About</a>
                             <a href = "#">Speakers</a>
+                            <a href= "https://mavric.umd.edu/mavric-conference-2018">Conference 2018</a>
                             <a href = "#">Schedule</a>
                             <a href = "#">Prices</a>
                         </div>
@@ -62,9 +66,9 @@
                     </div>
                 </div>
                 <div class="box_content">
-                    <p>Submissions open now</p>
-                    <p>We welcome talks from corporate, academic, and governmental practitioners of AR, VR, and MR. This year we are focused on current and near future applications of XR.</p>
-                    <a class="button outline dark" href="https://forms.gle/4UzzBb56RPDM5iHu5" target="_blank">Submit Here</a>
+                    <p>Reserve Your Seat</p>
+                    <p>Tickets for the 2019 MAVRIC conference are now available. Please join us Sep 17-18 in downtown DC as we explore the potential of XR technologies across multiple domains.</p>
+                    <a class="button outline dark"  id="eventbrite-widget-modal-trigger-65832927057">Tickets Here</a>
                 </div>
             </div>
             <div class="col brochure box right">
@@ -321,5 +325,26 @@
             <i class="far fa-envelope"></i>
         </div>
     </div>
+    <script type="text/javascript">
+        var exampleCallback = function() {
+            console.log('Order complete!');
+        };
+    
+        window.EBWidgets.createWidget({
+            widgetType: 'checkout',
+            eventId: '65832927057',
+            modal: true,
+            modalTriggerElementId: 'eventbrite-widget-modal-trigger-65832927057',
+            onOrderComplete: exampleCallback
+        });
+    </script>
+    <!-- <script>
+        function showMailingPopUp() {
+            require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"YOUR_UUID_GOES_HERE","lid":"YOUR_LID_GOES_HERE"}) })
+            document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        };
+        
+        document.getElementsByClassName("subscribe").onclick = function() {showMailingPopUp(); console.log("yo")};
+    </script> -->
 </body>
 </html>

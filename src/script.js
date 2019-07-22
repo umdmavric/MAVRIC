@@ -1,4 +1,6 @@
 import jump from 'jump.js'
+import slick from 'slick-carousel'
+import $ from 'jquery'
 
 let head = document.querySelector('.head');
 head.style.height = screen.height/2;
@@ -88,3 +90,10 @@ window.addEventListener("scroll", function (event) {
     }
 });
 
+let autoplay = document.querySelector('.s-cards')
+// $('.s-cards').slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//   });

@@ -215,6 +215,13 @@ a {
     margin-top: 20px;
 }
 
+.is-active {
+    display: block !important;
+}
+
+.is-not {
+    display: none !important;
+}
 
 .con_l > p, .con_r > p{
     font-size: 1.5em !important;

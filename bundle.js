@@ -13795,27 +13795,27 @@ let content = document.querySelectorAll('.who');
 console.log(content);
 let hidden = document.querySelectorAll('.hover_content');
 console.log(hidden);
-let check = true; // let plus = document.querySelector('.fa-plus')
-// let minus = document.querySelector('.fa-minus')
+let check = true;
+let plus = document.querySelectorAll('.fa-plus');
+let minus = document.querySelectorAll('.fa-minus');
+console.log(plus);
+console.log(minus);
 
 for (let i = 0; i < content.length; i++) {
-  console.log(content[i].childNodes[0]);
   content[i].addEventListener("click", () => {
     if (check) {
-      hidden[i].style.display = "block"; // content
-      // content[i].childNodes[3].
-      // plus[i].classList.remove('is-active')
-      // plus[i].classList.add('is-not')
-      // minus[i].classList.remove('is-not')
-      // minus[i].classList.add('is-active')
-
+      hidden[i].style.display = "block";
+      plus[i].classList.remove('is-active');
+      plus[i].classList.add('is-not');
+      minus[i].classList.remove('is-not');
+      minus[i].classList.add('is-active');
       check = false;
     } else {
-      hidden[i].style.display = "none"; // plus[i].classList.add('is-active')
-      // plus[i].classList.remove('is-not')
-      // minus[i].classList.remove('is-active')
-      // minus[i].classList.add('is-not')
-
+      hidden[i].style.display = "none";
+      plus[i].classList.add('is-active');
+      plus[i].classList.remove('is-not');
+      minus[i].classList.remove('is-active');
+      minus[i].classList.add('is-not');
       check = true;
     }
   });

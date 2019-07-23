@@ -468,6 +468,29 @@ a {
       visibility: hidden;
       cursor: pointer;
   }
+/* 
+  .subscribe {
+      background-color: #666666;
+      position: fixed;
+      bottom: 0px;
+      text-align: center;
+      width: 100%;
+      color: white;
+      height: 100px;
+      padding-top: 20px;
+  }
+
+  .subscribe p {
+    
+  }
+
+  .subscribe a {
+      background-color: #e5e8ea;
+      color:#333333;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 14px;
+  } */
 
   /* media queries */
 

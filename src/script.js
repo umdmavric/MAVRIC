@@ -109,3 +109,12 @@ let autoplay = document.querySelector('.s-cards')
 //     autoplay: true,
 //     autoplaySpeed: 2000,
 //   });
+
+let cross = document.querySelector('.fa-times');
+
+cross.addEventListener('click', () => {
+    document.querySelector('.modal').classList.remove('slideInRight');
+    document.querySelector('.modal').classList.add('slideOutRight');
+    document.querySelector('.modal').classList.remove('delay-2s');
+})
+

@@ -13887,4 +13887,10 @@ let autoplay = document.querySelector('.s-cards'); // $('.s-cards').slick({
 //     autoplaySpeed: 2000,
 //   });
 
+let cross = document.querySelector('.fa-times');
+cross.addEventListener('click', () => {
+  document.querySelector('.modal').classList.remove('slideInRight');
+  document.querySelector('.modal').classList.add('slideOutRight');
+});
+
 },{"jquery":1,"jump.js":2,"slick-carousel":3}]},{},[4]);

@@ -1,5 +1,16 @@
 /* @import url(chota.css); */
 
+html {
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+    cursor: pointer;
+}
+
 /* modal */
 
 .modal {
@@ -35,18 +46,6 @@
     background-color: #333333;
     border-radius: 4px;
     padding: 10px;
-}
-
-
-html {
-    height: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-a {
-    color: white;
-    cursor: pointer;
 }
 
 /* header */

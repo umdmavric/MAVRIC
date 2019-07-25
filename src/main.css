@@ -137,6 +137,7 @@ a {
 
 .box_content p {
     margin-bottom: 15px;
+    height: 65px;
 }
 
 .box_content p:nth-child(1) {
@@ -147,9 +148,9 @@ a {
     font-size: 0.65em;
 }
 
-#second-p {
+/* #second-p {
     height: 73px;
-}
+} */
 
 .circle {
     text-align: center;
@@ -819,5 +820,9 @@ a {
 
     .box_content p:nth-child(2) {
         max-width:500px;
+    }
+
+    .box_content {
+        margin-right: 20px;
     }
 }

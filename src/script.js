@@ -102,13 +102,16 @@ window.addEventListener("scroll", function (event) {
     }
 });
 
-let autoplay = document.querySelector('.s-cards')
-// $('.s-cards').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//   });
+let autoplay = document.querySelector('.autoplay')
+$(document).ready(() => {
+    $('.s-cards').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });    
+      console.log("heho")
+})
 
 let cross = document.querySelector('.fa-times');
 

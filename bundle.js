@@ -13880,13 +13880,16 @@ window.addEventListener("scroll", function (event) {
     sub.style.visibility = "visible";
   }
 });
-let autoplay = document.querySelector('.s-cards'); // $('.s-cards').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//   });
-
+let autoplay = document.querySelector('.autoplay');
+(0, _jquery.default)(document).ready(() => {
+  (0, _jquery.default)('.s-cards').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+  console.log("heho");
+});
 let cross = document.querySelector('.fa-times');
 cross.addEventListener('click', () => {
   document.querySelector('.modal').classList.remove('slideInRight');

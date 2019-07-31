@@ -137,7 +137,6 @@ a {
 
 .box_content p {
     margin-bottom: 15px;
-    height: 65px;
 }
 
 .box_content p:nth-child(1) {
@@ -282,10 +281,21 @@ a {
     padding-left: 100px;
 }
 
-.s-cards {
+.carousel {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.s-cards {
+    display: flex; 
     margin-top: 5%;
+}
+
+.next, .prev {
+    height: 10px;
+    cursor: pointer;
 }
 
 .speaker-card {
@@ -599,7 +609,7 @@ a {
 
     .box {
         padding-top: 20px;
-        height: 400px;
+        height: 350px;
     }
     
     #second-p {

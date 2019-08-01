@@ -106,7 +106,11 @@ a {
     display: none;
 }
 
-.expo, .down {
+.expo {
+    display: none;
+}
+
+i.down {
     display: none;
 }
 
@@ -666,7 +670,8 @@ a {
         bottom: 43px;
     }
 
-    .down {
+    i.down {
+        display: inline-block;
         color: #fff;
         font-size: 2em;
         position: relative;

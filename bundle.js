@@ -13865,7 +13865,7 @@ hamburger.addEventListener("click", () => {
     hamburger.className += " is-active";
     hcheck = false;
     console.log(hcheck);
-    nav_mob.className += " small_active";
+    nav_mob.className += " small_active"; // document.querySelector('.hamburger-inner').style.backgroundColor = "#ff !important"
   } else {
     hamburger.className = "hamburger hamburger--spin";
     nav_mob.className += "small";
@@ -13895,6 +13895,9 @@ cross.addEventListener('click', () => {
   document.querySelector('.modal').classList.remove('slideInRight');
   document.querySelector('.modal').classList.add('slideOutRight');
   document.querySelector('.modal').classList.remove('delay-2s');
-});
+}); // if(window.innerWidth < 768) {
+//     document.querySelector("#image_white").classList.add('image_not_active')
+//     document.querySelector("#image_black").classList.remove('image_not_active')
+// }
 
 },{"jquery":1,"jump.js":2,"slick-carousel":3}]},{},[4]);

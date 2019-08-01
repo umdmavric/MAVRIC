@@ -84,6 +84,7 @@ hamburger.addEventListener("click",()=>{
         hcheck = false
         console.log(hcheck)
         nav_mob.className += " small_active"
+        // document.querySelector('.hamburger-inner').style.backgroundColor = "#ff !important"
     }
     else {
         hamburger.className = "hamburger hamburger--spin"
@@ -121,3 +122,7 @@ cross.addEventListener('click', () => {
     document.querySelector('.modal').classList.remove('delay-2s');
 })
 
+// if(window.innerWidth < 768) {
+//     document.querySelector("#image_white").classList.add('image_not_active')
+//     document.querySelector("#image_black").classList.remove('image_not_active')
+// }

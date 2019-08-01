@@ -68,7 +68,7 @@ a {
 }
 
 .head_content > img {
-    width: 45%;
+    width: 75%;
     position: relative;
     top: 200px;
 }
@@ -100,6 +100,14 @@ a {
 .links a {
     margin-right: 20px;
     color: white;
+}
+
+.image_not_active {
+    display: none;
+}
+
+.expo {
+    display: none;
 }
 
 /* content */
@@ -545,6 +553,14 @@ a {
 
   @media (min-width: 300px) and (max-width: 768px) {
     
+    .main_image {
+        display: none;
+    }
+
+    .head {
+        background-color:#333333; 
+    }
+
     .modal {
         display: none;
     }
@@ -598,7 +614,7 @@ a {
     }
 
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-        background-color: white !important;
+        background-color: #fff !important;
         width: 30px !important;
     }
 
@@ -612,6 +628,47 @@ a {
         height: 350px;
     }
     
+    #image_black {
+        width: 80%;
+    }
+
+    .head_content > p {
+        color: #fff;
+        font-size: 1.1em;
+    }
+
+    .expo {
+        color: #fff;
+        display: flex;
+        position: relative;
+        top: 300px;
+        justify-content: center;
+    }
+
+    .expo p:nth-child(1) {
+        margin-left: 20px; 
+    }
+
+    .expo_p {
+        color: #FFF;
+        margin-right: 20px;
+        font-size: 1em;
+    }
+
+    .expo_dot {
+        margin-right: 20px;
+        font-size: 4em;
+        position: relative;
+        bottom: 43px;
+    }
+
+    .down {
+        color: #fff;
+        font-size: 2em;
+        position: relative;
+        top: 300px;
+    }
+
     #second-p {
         height: inherit;
     }

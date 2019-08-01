@@ -68,7 +68,7 @@ a {
 }
 
 .head_content > img {
-    width: 75%;
+    width: 45%;
     position: relative;
     top: 200px;
 }
@@ -559,6 +559,10 @@ a {
 
     .head {
         background-color:#333333; 
+    }
+
+    .head_content > img {
+        width: 75%;
     }
 
     .modal {

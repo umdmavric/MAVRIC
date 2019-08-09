@@ -139,7 +139,7 @@ let mobile_display =
     <div class = "row">
         <div class = "col left-side">
         </div>
-        <a href="#" class="more_speakers">All Speakers</a>
+        <a href="/src/more_speakers.html" class="more_speakers">All Speakers</a>
     </div>
 `
 let mobile  = (width) => {

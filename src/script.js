@@ -1,6 +1,7 @@
 import jump from 'jump.js'
 import slick from 'slick-carousel'
 import $ from 'jquery'
+import Glide from '@glidejs/glide'
 
 let head = document.querySelector('.head');
 head.style.height = screen.height/2;
@@ -103,16 +104,23 @@ window.addEventListener("scroll", function (event) {
     }
 });
 
-let autoplay = document.querySelector('.autoplay')
-$(document).ready(() => {
-    $('.s-cards').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      });    
-      console.log("heho")
+// let autoplay = document.querySelector('.autoplay')
+//     $('.s-cards').slick({
+//         arrows: false,
+//         autoplay:true,
+//         slidesToShow:3,
+//         slidesToScroll:3
+//       });    
+//       console.log("heho")
+let glide = new Glide('.glide', {
+    type: 'slider',
+    autoplay:2000,
+    rewind: true,
+    perView: 4,
+    bound: true
 })
+
+glide.mount()
 
 let cross = document.querySelector('.fa-times');
 
@@ -122,7 +130,9 @@ cross.addEventListener('click', () => {
     document.querySelector('.modal').classList.remove('delay-2s');
 })
 
-// if(window.innerWidth < 768) {
-//     document.querySelector("#image_white").classList.add('image_not_active')
-//     document.querySelector("#image_black").classList.remove('image_not_active')
-// }
+// $('.move').slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+// })

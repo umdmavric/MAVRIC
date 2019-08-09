@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@glidejs/glide": "^3.3.0",
     "browser-resolve": "^1.11.3",
     "concurrently": "^4.1.1",
     "jquery": "^3.4.1",

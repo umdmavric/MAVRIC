@@ -318,14 +318,22 @@ i.down {
 }
 
 .speaker-card {
-    height: 275px;
-    width: 200px;
+    height: 300px;
+    width: 200px !important;
     /* margin-left: 7%; */
     border-radius: 5px;
     background-color: white;
     box-shadow: 0px 24px 35px -12px rgba(102, 102, 102, 0.16);
     text-align: center;
+    margin-bottom: 30%;
+    cursor: pointer;
 }
+
+.glide__slides {
+    text-align: -webkit-center;
+    overflow: visible !important;
+}
+
 
 #name {
     padding-top: 3%; 

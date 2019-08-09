@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MAVRIC Conference</title>
     <link rel="stylesheet" href="https://unpkg.com/chota@latest">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/chota"> -->
     <link rel="stylesheet" href="./src/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
@@ -16,19 +16,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.js"></script>
     <link rel="shortcut icon" type="image/png" href="./assets/images/social_media_IcI_icon.ico"/>
+    <script type = "text/javascript" src="./bundle2.js" async></script>
     <script type="text/javascript" src="./bundle.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"3370d950051c69475e7539755","lid":"e0c7f605d5","uniqueMethods":true}) })</script> -->
     <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
     <noscript><a href="https://www.eventbrite.ca/e/2019-mavric-conference-tickets-65832927057" rel="noopener noreferrer" target="_blank"></noscript>
-    <script type = "text/javascript" src="./bundle2.js" async></script>
     <!-- <link rel="stylesheet" href="css/gallery.theme.css">
     <link rel="stylesheet" href="css/gallery.min.css"> -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3370d950051c69475e7539755/3da80bd36205b10fc84db8196.js");</script>
 </head>
 <body>
     <section class="head">
         <img src="./assets/images/header4.jpg" class="main_image">
+        <!-- <img src="./assets/images/Main_Wide_web.jpg" class="main_image"> -->
         <div class="container top">
             <div class="header">
                 <nav class="nav">
@@ -207,35 +209,98 @@
             </div>
         </div>
        
-    <!-- <div class="speakers">
+    <div class="speakers">
         <p>Speakers</p>
-        <div class="carousel slider autoplay slick-initialized slick-slider slick-dotted">
-            <i class="fas fa-arrow-circle-left prev slick-prev slick-arrow"></i>
-            <div class="s-cards slick-track">
-                <div class="speaker-card slick-slide slick-cloned" data-slick-index="-3">
-                    <img src="./assets/images/AmitabhVarshney.jpg" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
-                    <p id="name">Dr. Amitabh Varshney</p>
-                    <p id="work">University of Maryland</p>
-                </div>
-                <div class="speaker-card slick-slide slick-cloned" data-slick-index="-2">
-                    <img src="./assets/images/Elizabeth Muse.jpg" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
-                </div>
-                <div class="speaker-card slick-slide slick-cloned" data-slick-index="-1">
-                
-                </div>
-                <div class="speaker-card slick-slide slick-cloned" data-slick-index="0">
-                
-                </div>
-                <div class="speaker-card slick-slide slick-cloned" data-slick-index="1">
-                
-                </div>
-                <div class="speaker-card slick-slide slick-cloned" data-slick-index="2">
-                
-                </div>
+        <div class="carousel glide">
+            <!-- <i class="fas fa-arrow-circle-left prev slick-prev slick-arrow"></i> -->
+            <div class="s-cards glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <div class="speaker-card">
+                                <img src="https://dl.airtable.com/.attachmentThumbnails/92f64f1ae9de840144dc1af554ea27f5/bf19905f" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                <p id="name">Dr. Susan Persky</p>
+                                <p id="work"> National Human Genome Research Institute</p>
+                        </div>
+                    </li>
+
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/80ffaeca341fc4249e685a57abf1841a/8141b63a" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name">Hurriyet Aydin Ok</p>
+                                    <p id="work">VRT-U LLC</p>
+                            </div>
+                        </li>
+                        
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/48d445051821d10a5a9d9e75d2c9118e/c1803c13" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name" style="margin-top: -20px">Neil Levin</p>
+                                    <p id="work">Power Media</p>
+                            </div>
+                        </li>
+                        
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/4ac9f068afe292b06d21a65dd6fc3214/5a5bc504" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name">Don Engel</p>
+                                    <p id="work">UMBC</p>
+                            </div>
+                        </li>
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/e86e12a451c1fe3eddb0cd1bf23940bf/75b41934" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name">David Busch</p>
+                                    <p id="work">Booz Allen Hamilton</p>
+                            </div>
+                        </li>
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/4ed55a31f2539e06279edb6954fae077/0c838392" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name"> Nicholas Fortugno</p>
+                                    <p id="work">Playmatics</p>
+                            </div>
+                        </li>
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/d81f01532b0da9017a42e411a1ffcec5/55906cf7" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name">Jordan Higgins</p>
+                                    <p id="work">U.Group<span>&#38;</span>George Mason University </p>
+                            </div>
+                        </li>
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/c3df58634c03eede367f14c21b58b50e/b564d1ed" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name">Ian Coffman</p>
+                                    <p id="work">AnthroTronix, Inc.</p>
+                            </div>
+                        </li>
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/fbcbf66373bc98fe2ebe79b81191bd72/ce7a03df" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name">Madlen Simon</p>
+                                    <p id="work">Maryland's School of Architecture, Planning, and Preservation </p>
+                            </div>
+                        </li>
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/66187a51b24d82abcdd788b9c8306987/821c51d4" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name">Ming Hu</p>
+                                    <p id="work">UMD's School of Architecture, Planning, and Preservation</p>
+                            </div>
+                        </li>
+                    <li class="glide__slide">
+                            <div class="speaker-card">
+                                    <img src="https://dl.airtable.com/.attachmentThumbnails/aeeb9721b51ad33ee2013b139425935d/7a9faafb" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                                    <p id="name" style="margin-top: -20px">Raj Shekhar, PhD</p>
+                                    <p id="work">Medtech , Children's National</p>
+                            </div>
+                        </li>
+                </ul>
             </div>
-            <i class="fas fa-arrow-circle-right next slick-next slick-arrow"></i>
+            <!-- <i class="fas fa-arrow-circle-right next slick-next slick-arrow"></i> -->
         </div>
-    </div> -->
+    </div>
+
         <div class="prices">
             <p>Prices</p>
             <div class="rows">

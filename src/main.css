@@ -334,7 +334,6 @@ i.down {
     overflow: visible !important;
 }
 
-
 #name {
     padding-top: 3%; 
     font-weight: 600;
@@ -803,6 +802,36 @@ i.down {
         display: block;
     }
 
+    .speakers {
+        height: 100%;
+    }
+
+    .carousel {
+        text-align: center;
+    }
+
+    .speakers p:nth-child(1) {
+        padding-left: 40px;
+    }
+
+    .speakers img {
+        width: 50%;
+        clip-path: circle(40% at 50% 50%);
+    }
+    
+    .more_speakers {
+        color: #333333;
+        border: 2px solid #666666;
+        margin: 0 auto;
+        border-radius: 4px;
+        padding: 10px; 
+        width: 150px;
+    }
+
+    .more_speakers:hover {
+        color: #e5e8ea;
+        background: #333333;
+    }
   }
 
   @media (min-width:768px) and (max-width:1200px) {

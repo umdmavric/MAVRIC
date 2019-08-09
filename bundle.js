@@ -17258,6 +17258,11 @@ exports.default = _default;
 }));
 
 },{"jquery":2}],5:[function(require,module,exports){
+
+module.exports = {
+    "apikey" : "keyhyniEmyt4kcvvs"
+}
+},{}],6:[function(require,module,exports){
 "use strict";
 
 var _jump = _interopRequireDefault(require("jump.js"));
@@ -17268,8 +17273,11 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 
+var _apiKey = _interopRequireDefault(require("./apiKey"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${_apiKey.default.apikey}`;
 let head = document.querySelector('.head');
 head.style.height = screen.height / 2;
 console.log(screen.height);
@@ -17311,6 +17319,7 @@ for (let i = 0; i < nav.children.length; i++) {
     console.log(nav.children[i].innerHTML);
     if (nav.children[i].innerHTML == "About") (0, _jump.default)('.about');
     if (nav.children[i].innerHTML == "Prices") (0, _jump.default)('.prices');
+    if (nav.children[i].innerHTML == "Speakers") (0, _jump.default)('.speakers');
   });
 }
 
@@ -17339,6 +17348,13 @@ for (let i = 0; i < nav2.children.length; i++) {
       (0, _jump.default)('.prices');
       hcheck = true;
     }
+
+    if (nav2.children[i].innerHTML == "Speakers") {
+      hamburger.className = "hamburger hamburger--spin";
+      nav_mob.className += "small";
+      (0, _jump.default)('.speakers');
+      hcheck = true;
+    }
   });
 }
 
@@ -17361,15 +17377,7 @@ window.addEventListener("scroll", function (event) {
   if (scroll >= 1500 && scroll <= 2100) {
     sub.style.visibility = "visible";
   }
-}); // let autoplay = document.querySelector('.autoplay')
-//     $('.s-cards').slick({
-//         arrows: false,
-//         autoplay:true,
-//         slidesToShow:3,
-//         slidesToScroll:3
-//       });    
-//       console.log("heho")
-
+});
 let glide = new _glide.default('.glide', {
   type: 'slider',
   autoplay: 2000,
@@ -17383,11 +17391,48 @@ cross.addEventListener('click', () => {
   document.querySelector('.modal').classList.remove('slideInRight');
   document.querySelector('.modal').classList.add('slideOutRight');
   document.querySelector('.modal').classList.remove('delay-2s');
-}); // $('.move').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-// })
+});
+let mobile_display = `
+    <div class = "row">
+        <div class = "col left-side">
+        </div>
+        <a href="#" class="more_speakers">All Speakers</a>
+    </div>
+`;
 
-},{"@glidejs/glide":1,"jquery":2,"jump.js":3,"slick-carousel":4}]},{},[5]);
+let mobile = width => {
+  let i = 0;
+  let carousel = document.querySelector('.carousel');
+
+  if (width.matches) {
+    carousel.innerHTML = "";
+    carousel.classList.remove('glide');
+    carousel.innerHTML = mobile_display;
+    let left = document.querySelector('.left-side');
+    let right = document.querySelector('.right-side');
+    fetch(url).then(resp => {
+      resp.json().then(data => {
+        data.records.forEach(element => {
+          if (element.fields.Headshot) {
+            if (i < 3) {
+              let insert = `
+                                <div class = "speaker-circ">
+                                    <img src = "${element.fields.Headshot[0].url}">
+                                    <p id="name_sm">${element.fields.Name}</p>
+                                </div>
+                            `;
+              left.innerHTML += insert;
+              i += 1;
+            }
+          }
+        });
+      });
+    });
+  }
+};
+
+let x = window.matchMedia("(max-width:768px)");
+mobile(x);
+x.addListener(mobile);
+
+},{"./apiKey":5,"@glidejs/glide":1,"jquery":2,"jump.js":3,"slick-carousel":4}]},{},[6]);

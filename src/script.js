@@ -2,6 +2,10 @@ import jump from 'jump.js'
 import slick from 'slick-carousel'
 import $ from 'jquery'
 import Glide from '@glidejs/glide'
+import apiConfig from './apiKey'
+
+let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${apiConfig.apikey}`
+
 
 let head = document.querySelector('.head');
 head.style.height = screen.height/2;
@@ -48,6 +52,8 @@ for (let i = 0;i<nav.children.length;i++) {
             jump('.about')
         if(nav.children[i].innerHTML == "Prices")
             jump('.prices')
+        if(nav.children[i].innerHTML == "Speakers")
+            jump('.speakers')
     })
 }
 
@@ -72,6 +78,12 @@ for (let i = 0;i<nav2.children.length;i++) {
             hamburger.className = "hamburger hamburger--spin"
             nav_mob.className += "small"
             jump('.prices')
+            hcheck = true
+        }
+        if(nav2.children[i].innerHTML == "Speakers") {
+            hamburger.className = "hamburger hamburger--spin"
+            nav_mob.className += "small"
+            jump('.speakers')
             hcheck = true
         }
     })
@@ -104,14 +116,6 @@ window.addEventListener("scroll", function (event) {
     }
 });
 
-// let autoplay = document.querySelector('.autoplay')
-//     $('.s-cards').slick({
-//         arrows: false,
-//         autoplay:true,
-//         slidesToShow:3,
-//         slidesToScroll:3
-//       });    
-//       console.log("heho")
 let glide = new Glide('.glide', {
     type: 'slider',
     autoplay:2000,
@@ -130,9 +134,45 @@ cross.addEventListener('click', () => {
     document.querySelector('.modal').classList.remove('delay-2s');
 })
 
-// $('.move').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-// })
+let mobile_display = 
+`
+    <div class = "row">
+        <div class = "col left-side">
+        </div>
+        <a href="#" class="more_speakers">All Speakers</a>
+    </div>
+`
+let mobile  = (width) => {
+    let i = 0
+    let carousel = document.querySelector('.carousel')
+    if(width.matches) {
+        carousel.innerHTML = ""
+        carousel.classList.remove('glide')
+        carousel.innerHTML = mobile_display
+        let left = document.querySelector('.left-side')
+        let right = document.querySelector('.right-side')
+        fetch(url)
+        .then((resp) => {
+            resp.json().then((data) => {
+                data.records.forEach(element => {
+                    if(element.fields.Headshot) {
+                        if(i<3) {
+                            let insert = 
+                            `
+                                <div class = "speaker-circ">
+                                    <img src = "${element.fields.Headshot[0].url}">
+                                    <p id="name_sm">${element.fields.Name}</p>
+                                </div>
+                            `
+                            left.innerHTML += insert
+                            i+=1
+                        }
+                    }
+                })
+            })
+        })
+    }
+}
+let x = window.matchMedia("(max-width:768px)")
+mobile(x)
+x.addListener(mobile)

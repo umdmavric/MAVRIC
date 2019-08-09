@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify src/script.js -p esmify > bundle.js",
-    "build2": "browserify src/data.js -p esmify > bundle2.js",
+    "build2": "browserify src/generate.js -p esmify > bundle2.js",
     "watch": "watchify src/script.js -p esmify -o bundle.js",
-    "watch2": "watchify src/data.js -p esmify -o bundle2.js",
+    "watch2": "watchify src/generate.js -p esmify -o bundle2.js",
     "boom": "concurrently --kill-others \"npm run watch\" \"npm run watch2\""
   },
   "author": "",

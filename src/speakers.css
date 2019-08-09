@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.carousel {
+    height: 100%;
+    text-align: center;
+}
+
+.col {
+    margin: 0 !important;
+}
+
+.speakers > p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+.speaker-circ > img {
+    width: 50%;
+    clip-path: circle(33.4% at 50% 50%);
+}

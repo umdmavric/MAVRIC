@@ -1,9 +1,10 @@
 body {
     margin: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 
-.carousel {
+.carousel_2 {
     height: 100%;
     text-align: center;
 }
@@ -12,7 +13,7 @@ body {
     margin: 0 !important;
 }
 
-.speakers > p {
+.speakers_new > p {
     text-align: center;
     font-weight: 500;
     font-size: 1.5em;
@@ -21,4 +22,127 @@ body {
 .speaker-circ > img {
     width: 50%;
     clip-path: circle(33.4% at 50% 50%);
+}
+
+ /* footer */
+
+ .footer {
+    margin-top: 50px;
+    background-color: #333333;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.foots {
+    display: flex;
+    justify-content: center;
+}
+
+/* .foot1 {
+  position: relative;
+  left: 350px;
+} */
+
+.foot1 {
+  margin-right: 20%;
+}
+
+.address a {
+    color: white !important;
+}
+
+/* .foot2 {
+    position: relative;
+    right: 350px;
+} */
+
+.foot2 {
+  margin-left: 20%;
+}
+
+.social i {
+    margin-right: 20px;
+}
+
+.last-year {
+    margin-top: 20px;
+}
+
+.last-year > a {
+    color: #666666;
+}
+
+/* subscription */
+/* 
+.call {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+} */
+.subscribe {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF6B6C;
+    position: fixed;
+    bottom: 30px;
+    right:50px;
+    font-size: 1.5em; 
+    color: white;
+    text-align: center;
+    visibility: hidden;
+    cursor: pointer;
+    display: none;
+}
+/* 
+.subscribe {
+    background-color: #666666;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    height: 100px;
+    padding-top: 20px;
+}
+
+.subscribe p {
+  
+}
+
+.subscribe a {
+    background-color: #e5e8ea;
+    color:#333333;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+} */
+
+
+@media (min-width: 300px) and (max-width: 768px) {
+
+.foots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot1 {
+    position: relative;
+    left:20px;
+    margin: 0;
+}
+
+.foot2 {
+    position: relative;
+    margin: 0;
+    top: 20px;
+    right: 0px;
+}
+
+.subscribe {
+    display: block;
+}
 }

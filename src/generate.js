@@ -2,7 +2,7 @@ import apiConfig from './apiKey'
 let mobile_display = 
 `
     <div class = "row">
-        <div class = "col left-side">
+        <div class = "col new_left_side">
         </div>
     </div>
 `
@@ -11,12 +11,11 @@ let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${apiC
 console.log(document.querySelector('.head'))
 let mobile  = (width) => {
     let i = 0
-    let carousel = document.querySelector('.carousel')
+    let carousel = document.querySelector('.carousel_2')
     console.log(carousel)
     if(width.matches) {
         carousel.innerHTML = mobile_display
-        let left = document.querySelector('.left-side')
-        let right = document.querySelector('.right-side')
+        let left = document.querySelector('.new_left_side')
         fetch(url)
         .then((resp) => {
             resp.json().then((data) => {

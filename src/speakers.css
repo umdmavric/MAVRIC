@@ -23,6 +23,7 @@ body {
     width: 50%;
     clip-path: circle(33.4% at 50% 50%);
 }
+    
 
  /* footer */
 
@@ -52,6 +53,9 @@ body {
     color: white !important;
 }
 
+a {
+    color: white !important;
+}
 /* .foot2 {
     position: relative;
     right: 350px;

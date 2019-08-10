@@ -35,7 +35,7 @@ let mobile = width => {
                                 <div class = "speaker-circ">
                                     <img src = "${element.fields.Headshot[0].url}">
                                     <p id="name_sm" style="font-weight:bold">${element.fields.Name}</p>
-                                    <p id="work_sm" style="max-width:500px">${element.fields.Company}</p>
+                                    <p id="work_sm" style="max-width:300px; margin: 0 auto;">${element.fields.Company}</p>
                                 </div>
                             `;
             left.innerHTML += insert;

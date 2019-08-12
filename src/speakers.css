@@ -22,6 +22,7 @@ body {
 .speaker-circ > img {
     width: 50%;
     clip-path: circle(33.4% at 50% 50%);
+    -webkit-clip-path: circle(33.4% at 50% 50%);
 }
     
 

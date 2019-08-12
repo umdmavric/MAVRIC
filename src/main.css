@@ -223,6 +223,11 @@ i.down {
     padding-left: 100px;
 }
 
+.new_row {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .who a {
     position: relative;
     font-size: 1.25em;
@@ -234,6 +239,7 @@ i.down {
     height: 0px;
     margin-top: 13px;
 }
+
 .att_row {
     margin-left: 200px;
     margin-right: 200px;
@@ -241,12 +247,12 @@ i.down {
 }
 
 .who {
-    width: 100%;
     border-bottom: 2px solid #333333;
     display: flex;
     justify-content: space-between; 
     cursor: pointer; 
-    margin-right: 50px;  
+    margin-right: 50px;
+    margin-top: 30px;
 }
 
 .who:hover {
@@ -258,8 +264,8 @@ i.down {
     display: none;
     font-size: 0.55em;
     font-weight: 400;
-    max-width: 70%;
-    margin-left: 210px;
+    max-width: 90%;
+    margin-left: 15px;
     margin-top: 20px;
 }
 
@@ -347,6 +353,7 @@ i.down {
 
 .speakers img {
     clip-path: circle(100% at 50% 0);
+    -webkit-clip-path: circle(100% at 50% 0);
 }
 
 /* prices */
@@ -718,12 +725,20 @@ i.down {
         padding-left: 40px;
     }
 
+    .new_row {
+        width: 100%;
+    }
+
     .att_row {
         margin: 0 0 0 40px;
     }
 
+    .who {
+        margin-right: 10px;
+    }
+
     .con_l, .con_r {
-        margin-left: 50px;
+        /* margin-left: 50px; */
         margin-top: 0px;
     }
 

@@ -17451,6 +17451,9 @@ let speaker_html = (name, work, project, twitter, url, info) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
+        crossorigin="anonymous">
         <title>About Speaker</title>
     </head>
     <body>
@@ -17490,6 +17493,7 @@ let speaker_html = (name, work, project, twitter, url, info) => {
     .col-4 > img {
         width: 175px;
         clip-path: circle(40% at 50% 50%);
+        -webkit-clip-path: circle(40% at 50% 50%);
         margin-right: 30px;
     }
     
@@ -17530,6 +17534,10 @@ let speaker_html = (name, work, project, twitter, url, info) => {
     }
   
     .address a {
+        color: white !important;
+    }
+
+    a {
         color: white !important;
     }
   

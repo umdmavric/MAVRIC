@@ -32,7 +32,7 @@ let mobile = width => {
         data.records.forEach(element => {
           if (element.fields.Headshot) {
             let insert = `
-                                <div class = "speaker-cards">
+                                <div class = "speaker-card">
                                     <img src = "${element.fields.Headshot[0].url}">
                                     <p id="name_sm" style="font-weight:bold">${element.fields.Name}</p>
                                     <p id="work_sm" style="max-width:300px; margin: 0 auto;">${element.fields.Company}</p>

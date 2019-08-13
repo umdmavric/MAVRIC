@@ -19,7 +19,7 @@ body {
     font-size: 1.5em;
     margin-top: 15px;
 }
-.speaker-cards > img {
+.speaker-card > img {
     width: 50%;
     clip-path: circle(33.4% at 50% 50%);
     -webkit-clip-path: circle(33.4% at 50% 50%);

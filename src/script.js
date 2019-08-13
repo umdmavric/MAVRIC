@@ -163,7 +163,7 @@ let mobile  = (width) => {
         .then((resp) => {
             resp.json().then((data) => {
                 console.log(data)
-                data.records.forEach(element => {
+                data.records.forEach((element) => {
                     if(element.fields.Headshot) {
                         if(i<3) {
                             let insert = 
@@ -186,7 +186,7 @@ let x = window.matchMedia("(max-width:768px)")
 mobile(x)
 x.addListener(mobile)
 
-let speaker_html = (name,work,project,url,info) => {
+let speaker_html = (name,work,project,twitter,url,info) => {
    let html =  `
     <!DOCTYPE html>
     <html lang="en">
@@ -209,7 +209,7 @@ let speaker_html = (name,work,project,url,info) => {
     }
     
     .content {
-        height: 100vh;
+        margin-bottom: 200px;
         background-color: white;
         text-align: center;
         margin-top: 125px;
@@ -218,6 +218,12 @@ let speaker_html = (name,work,project,url,info) => {
     .project {
         font-size: 2em;
         font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .name {
+        margin-top: 40px;
     }
     
     .row {
@@ -239,6 +245,57 @@ let speaker_html = (name,work,project,url,info) => {
         width: 70%;
         text-align: left;
         font-size: 1.75em;
+    }
+
+    .twitter {
+        margin-right: 30px;
+    }
+
+    .footer {
+        margin-top: 50px;
+        background-color: #333333;
+        color: white;
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+  
+    .foots {
+        display: flex;
+        justify-content: center;
+    }
+  
+    /* .foot1 {
+      position: relative;
+      left: 350px;
+    } */
+  
+    .foot1 {
+      margin-right: 20%;
+    }
+  
+    .address a {
+        color: white !important;
+    }
+  
+    /* .foot2 {
+        position: relative;
+        right: 350px;
+    } */
+  
+    .foot2 {
+      margin-left: 20%;
+    }
+  
+    .social i {
+        margin-right: 20px;
+    }
+  
+    .last-year {
+        margin-top: 20px;
+    }
+  
+    .last-year > a {
+        color: #666666;
     }
     
     @media (max-width:600px) {
@@ -270,12 +327,42 @@ let speaker_html = (name,work,project,url,info) => {
             <div class="row">
                 <div class="col-4 pic">
                 <img src="${url}">
+                
                 </div>
                 <div class="col">
                     <p class="info">${info}</p>
                 </div>
             </div>
         </section>
+        <section class="footer">
+        <div class="foots">
+            <div class="foot1">
+                <div class="address">
+                    <p>About MAVRIC</p>
+                    <p>Mitchell Building, Suite 2130 
+                        <br>
+                        College Park, MD 20742
+                        <br>
+                        mavric@umd.edu
+                        <br>
+                        +1 301-405-2924
+                    </p>
+                    <a class="button outline" href="mailto:mavric@umd.edu?Subject=General%20Inquiry">Contact Us</a>
+                </div>
+            </div>
+            <div class="foot2">
+                <div class="follow">
+                    <p>Follow Us</p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/UnivofMaryland/" target="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/UMDMAVRIC"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/umdmavric/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://mavric.umd.edu/funding-and-events-archive"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </body>
     </html>
     `
@@ -297,7 +384,7 @@ speakers.forEach((element) => {
             resp.json().then((data) => {
                 data.records.forEach((el) => {
                     if(el.fields.Name === name) {
-                        speaker_html(el.fields.Name,el.fields.Company,el.fields.PresentationTitle,el.fields.Headshot[0].url,el.fields["35 word mini-bio"])
+                        speaker_html(el.fields.Name,el.fields.Company,el.fields.PresentationTitle,el.fields.Twitter,el.fields.Headshot[0].url,el.fields["35 word mini-bio"])
                     }
                 })
             })

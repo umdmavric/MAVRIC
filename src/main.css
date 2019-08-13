@@ -214,6 +214,11 @@ i.down {
     padding-left: 100px;
 }
 
+.available, .speak {
+    cursor: pointer;
+    color: #666666;
+}
+
 /* attend */
 
 .attend p:nth-child(1) {

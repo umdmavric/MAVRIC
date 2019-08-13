@@ -107,6 +107,14 @@ hamburger.addEventListener("click",()=>{
     
 })
 
+document.querySelector('.available').addEventListener('click', () => {
+    jump('.sponsor')
+})
+
+document.querySelector('.speak').addEventListener('click', () => {
+    jump('.speakers')
+})
+
 let sub = document.querySelector('.subscribe');
 
 window.addEventListener("scroll", function (event) {
@@ -154,6 +162,7 @@ let mobile  = (width) => {
         fetch(url)
         .then((resp) => {
             resp.json().then((data) => {
+                console.log(data)
                 data.records.forEach(element => {
                     if(element.fields.Headshot) {
                         if(i<3) {
@@ -176,3 +185,169 @@ let mobile  = (width) => {
 let x = window.matchMedia("(max-width:768px)")
 mobile(x)
 x.addListener(mobile)
+
+let speaker_html = (name,work,project,url,info) => {
+   let html =  `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+        <title>About Speaker</title>
+    </head>
+    <body>
+    <style>
+    html {
+        height: 100%;
+    }
+    
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+    
+    .content {
+        height: 100vh;
+        background-color: white;
+        text-align: center;
+        margin-top: 125px;
+    }
+    
+    .project {
+        font-size: 2em;
+        font-weight: 500;
+    }
+    
+    .row {
+        margin-top: 50px;
+        margin: 0 auto;
+    }
+    
+    .col-4 > img {
+        width: 175px;
+        clip-path: circle(40% at 50% 50%);
+        margin-right: 30px;
+    }
+    
+    .pic {
+        text-align: right;
+    }
+    
+    .info {
+        width: 70%;
+        text-align: left;
+        font-size: 1.75em;
+    }
+    
+    @media (max-width:600px) {
+        .row {
+            justify-content: center !important;
+        }
+    
+        .col-4 {
+            text-align: center;
+        }
+    
+        .col-4 > img {
+            margin: 0;
+        }
+    
+        .col {
+            margin: 0 auto;
+        }
+
+        .info {
+            margin: 0 auto;
+            font-size: 1.25em;
+        }
+    }
+    </style>
+        <section class="content">
+            <p class="project">${project}</p>
+            <p class="name">${name} --${work}</p>
+            <div class="row">
+                <div class="col-4 pic">
+                <img src="${url}">
+                </div>
+                <div class="col">
+                    <p class="info">${info}</p>
+                </div>
+            </div>
+        </section>
+    </body>
+    </html>
+    `
+    let open = window.open("")
+    open.document.write(html)
+}
+
+let speakers = document.querySelectorAll('.speaker-card')
+// let speakers_mobile = document.querySelectorAll('.speaker-circ')
+// console.log(speakers_mobile)
+
+speakers.forEach((element) => {
+    element.addEventListener('click', () => {
+        console.log(element.children)
+        let name = element.children[1].innerHTML;
+        console.log(name)
+        fetch(url)
+        .then((resp) => {
+            resp.json().then((data) => {
+                data.records.forEach((el) => {
+                    if(el.fields.Name === name) {
+                        speaker_html(el.fields.Name,el.fields.Company,el.fields.PresentationTitle,el.fields.Headshot[0].url,el.fields["35 word mini-bio"])
+                    }
+                })
+            })
+        })
+    })
+})
+
+// speakers_mobile.forEach((element) => {
+//     element.addEventListener('click', () => {
+//         console.log(element.children)
+//         let name = element.children[1].innerHTML;
+//         console.log(name)
+//         fetch(url)
+//         .then((resp) => {
+//             resp.json().then((data) => {
+//                 data.records.forEach((el) => {
+//                     if(el.fields.Name === name) {
+//                         speaker_html(el.fields.Name,el.fields.Company,el.fields.PresentationTitle,el.fields.Headshot[0].url,el.fields["35 word mini-bio"])
+//                     }
+//                 })
+//             })
+//         })
+//     })
+// })
+
+// let mobile_speak = (width) => {
+//     if(width.matches) {
+//         let speakers_mobile = document.querySelectorAll('.speaker-circ')
+
+//         speakers_mobile.forEach((element) => {
+//             element.addEventListener('click', () => {
+//                 console.log(element.children)
+//                 let name = element.children[1].innerHTML;
+//                 console.log(name)
+//                 fetch(url)
+//                 .then((resp) => {
+//                     resp.json().then((data) => {
+//                         data.records.forEach((el) => {
+//                             if(el.fields.Name === name) {
+//                                 speaker_html(el.fields.Name,el.fields.Company,el.fields.PresentationTitle,el.fields.Headshot[0].url,el.fields["35 word mini-bio"])
+//                             }
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     }
+    
+// }
+
+// let y = window.matchMedia("(max-width:768px)")
+// mobile_speak(y)
+// y.addListener(mobile_speak)

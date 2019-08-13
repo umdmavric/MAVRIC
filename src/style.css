@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.content {
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+    margin-top: 125px;
+}
+
+.project {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.row {
+    margin-top: 50px;
+    margin: 0 auto;
+}
+
+.col-4 > img {
+    width: 175px;
+    clip-path: circle(40% at 50% 50%);
+    margin-right: 30px;
+}
+
+.pic {
+    text-align: right;
+}
+
+.info {
+    width: 70%;
+    text-align: left;
+}
+
+@media (max-width:600px) {
+    .row {
+        justify-content: center !important;
+    }
+
+    .col-4 {
+        text-align: center;
+    }
+
+    .col-4 > img {
+        margin: 0;
+    }
+
+    .col {
+        margin: 0 auto;
+    }
+}

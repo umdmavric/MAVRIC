@@ -158,6 +158,7 @@ let speaker_html = (name, work, project, twitter, url, info) => {
          .info {
              margin: 0 auto;
              font-size: 1.25em;
+             text-align:center;
          }
          .foots {
             display: flex;

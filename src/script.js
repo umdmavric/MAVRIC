@@ -181,6 +181,7 @@ let mobile  = (width) => {
             })
         })
     }
+    
 }
 let x = window.matchMedia("(max-width:768px)")
 mobile(x)

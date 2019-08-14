@@ -138,7 +138,7 @@ let speaker_html = (name, work, project, twitter, url, info) => {
          color: #666666;
      }
      
-     @media (max-width:600px) {
+     @media (max-width:768px) {
          .row {
              justify-content: center !important;
          }
@@ -159,6 +159,28 @@ let speaker_html = (name, work, project, twitter, url, info) => {
              margin: 0 auto;
              font-size: 1.25em;
          }
+         .foots {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .foot1 {
+            position: relative;
+            left:20px;
+            margin: 0;
+        }
+        
+        .foot2 {
+            position: relative;
+            margin: 0;
+            top: 20px;
+            right: 0px;
+        }
+        
+        .subscribe {
+            display: block;
+        }
      }
      </style>
          <section class="content">

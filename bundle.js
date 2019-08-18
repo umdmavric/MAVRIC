@@ -17630,7 +17630,7 @@ let speaker_html = (name, work, project, twitter, url, info) => {
     </body>
     </html>
     `;
-  let open = window.open("");
+  let open = window.open("about:blank");
   open.document.write(html);
 };
 

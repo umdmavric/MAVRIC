@@ -17442,7 +17442,7 @@ let x = window.matchMedia("(max-width:768px)");
 mobile(x);
 x.addListener(mobile);
 
-let speaker_html = (name, work, project, twitter, url, info) => {
+let speaker_html = (name, work, project, twitter, url, des, info) => {
   let html = `
     <!DOCTYPE html>
     <html lang="en">
@@ -17501,10 +17501,16 @@ let speaker_html = (name, work, project, twitter, url, info) => {
         text-align: right;
     }
     
+    .title {
+        margin: 0 auto;
+        font-size: 1.5em;
+        text-align: left;
+    }
+
     .info {
         width: 70%;
         text-align: left;
-        font-size: 1.75em;
+        font-size: 1em;
     }
 
     .twitter {
@@ -17594,6 +17600,9 @@ let speaker_html = (name, work, project, twitter, url, info) => {
                 
                 </div>
                 <div class="col">
+                    <p class="title">Session Description</p>
+                    <p class="info">${des}</p>
+                    <p class="title">Bio</p>
                     <p class="info">${info}</p>
                 </div>
             </div>
@@ -17646,7 +17655,7 @@ speakers.forEach(element => {
       resp.json().then(data => {
         data.records.forEach(el => {
           if (el.fields.Name === name) {
-            speaker_html(el.fields.Name, el.fields.Company, el.fields.PresentationTitle, el.fields.Twitter, el.fields.Headshot[0].url, el.fields["35 word mini-bio"]);
+            speaker_html(el.fields.Name, el.fields.Company, el.fields.PresentationTitle, el.fields.Twitter, el.fields.Headshot[0].url, el.fields["Session Description"], el.fields["35 word mini-bio"]);
           }
         });
       });

@@ -281,7 +281,7 @@ let mobile = width => {
         // console.log(speakers_mobile)
 
         speakers.forEach(element => {
-          element.addEventListener('click', () => {
+          element.onclick = () => {
             console.log(element);
             console.log(element.children);
             let name = element.children[1].innerHTML;
@@ -296,7 +296,7 @@ let mobile = width => {
                 });
               });
             });
-          });
+          };
         });
       });
     });

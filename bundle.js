@@ -17647,7 +17647,7 @@ let speakers = document.querySelectorAll('.speaker-card'); // let speakers_mobil
 // console.log(speakers_mobile)
 
 speakers.forEach(element => {
-  element.addEventListener('click', () => {
+  element.onclick = () => {
     console.log(element.children);
     let name = element.children[1].innerHTML;
     console.log(name);
@@ -17660,7 +17660,7 @@ speakers.forEach(element => {
         });
       });
     });
-  });
+  };
 }); // speakers_mobile.forEach((element) => {
 //     element.addEventListener('click', () => {
 //         console.log(element.children)

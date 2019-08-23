@@ -1,0 +1,200 @@
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+         <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
+         crossorigin="anonymous">
+         <title>About Speaker</title>
+     </head>
+     <body>
+     <style>
+     html {
+         height: 100%;
+     }
+     
+     body {
+         margin: 0;
+         overflow-x: hidden;
+     }
+     
+     .content {
+         margin-bottom: 200px;
+         background-color: white;
+         text-align: center;
+         margin-top: 125px;
+     }
+     
+     .project {
+         font-size: 2em;
+         font-weight: 500;
+         max-width: 600px;
+         margin: 0 auto;
+     }
+ 
+     .name {
+         margin-top: 40px;
+     }
+     
+     .row {
+         margin-top: 50px;
+         margin: 0 auto;
+     }
+     
+     .col-4 > img {
+         width: 175px;
+         clip-path: circle(40% at 50% 50%);
+         -webkit-clip-path: circle(40% at 50% 50%);
+         margin-right: 30px;
+     }
+     
+     .pic {
+         text-align: right;
+     }
+     
+     .title {
+         margin: 0 auto;
+         font-size: 1.5em;
+         text-align: left;
+     }
+ 
+     .info {
+         width: 70%;
+         text-align: left;
+         font-size: 1em;
+     }
+ 
+     .twitter {
+         margin-right: 30px;
+     }
+ 
+     .footer {
+         margin-top: 50px;
+         background-color: #333333;
+         color: white;
+         padding-top: 60px;
+         padding-bottom: 50px;
+     }
+   
+     .foots {
+         display: flex;
+         justify-content: center;
+     }
+   
+     /* .foot1 {
+       position: relative;
+       left: 350px;
+     } */
+   
+     .foot1 {
+       margin-right: 20%;
+     }
+   
+     .address a {
+         color: white !important;
+     }
+ 
+     a {
+         color: white !important;
+     }
+   
+     /* .foot2 {
+         position: relative;
+         right: 350px;
+     } */
+   
+     .foot2 {
+       margin-left: 20%;
+     }
+   
+     .social i {
+         margin-right: 20px;
+     }
+   
+     .last-year {
+         margin-top: 20px;
+     }
+   
+     .last-year > a {
+         color: #666666;
+     }
+     
+     @media (max-width:600px) {
+         .row {
+             justify-content: center !important;
+         }
+     
+         .col-4 {
+             text-align: center;
+         }
+     
+         .col-4 > img {
+             margin: 0;
+         }
+     
+         .col {
+             margin: 0 auto;
+         }
+ 
+         .info {
+             margin: 0 auto;
+             font-size: 1.25em;
+         }
+     }
+     </style>
+         <section class="content">
+             <p class="project">3D Scanning and Visualization for Scientific Discovery</p>
+             <p class="name">Don Engel --Univ of Maryland - Baltimore County</p>
+             <div class="row">
+                 <div class="col-4 pic">
+                 <img src="https://dl.airtable.com/.attachments/2bbe6f28c9cec51bc0a4eb5518cea161/813726df/don1.jpg">
+                 
+                 </div>
+                 <div class="col">
+                     <p class="title">Session Description</p>
+                     <p class="info">"The lab I lead (the UMBC Assistive Visualization and Artificial Intelligence Lab - AVAIL) is affiliated with UMBC's Imaging Research Center. I will give an overview of AVAIL's and IRC's VR-related facilities and recent work. Our facilities include a large greenscreen VR space for head-mounted displays (HMDs), other non-HMD display technologies, a 3D scanning facility, and a room-sized curved 50-megapixel multi-user VR wall. Recent and ongoing projects include combining virtual reality with biometric sensors for psychological research; implementing a photogrammetry processing pipeline on UMBC's high performance computing facility; combining photogrammetry with motion tracking for automatic rigging; and VR-based capture of the interaction between real humans and virtual robots for the collection of data to train real robots.
+
+Our photogrammetry facility is a room-sized 3D scanner was made possible with an NSF Major Research Instrumentation (MRI) award and was constructed in collaboration with Direct Dimensions, Inc. It consists of 94 cameras rigged to fire simultaneously, in sync with distributed light sources around the room. It includes four projectors to add more complexity to improve feature detection on particularly simple scenes. The facility includes dedicated computing resources for processing the 94 images into a 3D model. We have been using Agisoft Photoscan (now called Metashape) for this work, but are transitioning to using MeshRoom on the university's high performance computing facility, itself supported by three NSF MRI awards and equipment donations from NASA.
+
+Our VR wall was also made possible with another NSF MRI award and was constructed in collaboration with the Mechdyne Corporation. Further financial support has been provided by Next Century Corporation. The wall is a six column ARC display, which is a partial CAVE2. The wall consists of 24 monitors (six columns, four rows). Each monitor is a 1080p passive 3D display, so the total resolution of the system is 11,520 by 4,320. The width is the equivalent of a 12K display and the height is the equivalent of an 8K display. An Advanced Realtime Tracking (ART) system provides motion tracking, allowing for a primary user's 3D glasses to be tracked (providing parallax). Other objects (e.g. handheld controllers) are trackable, as well. We have rearchitected the system relative to what was initially provided by Mechdyne to allow it to run as a single node, meaning that any programs designed to run on a single node (including 3D programs) scale gracefully across the entire display."</p>
+                     <p class="title">Bio</p>
+                     <p class="info">Dr. Don Engel is UMBC's Assistant Vice President for Research and holds affiliate appointments as a professor in Computer Science, in Physics, and in the UMBC Imaging Research Center. As a researcher, Don directs UMBC's Assistive Visualization and Artificial Intelligence Lab (AVAIL).   </p>
+                 </div>
+             </div>
+         </section>
+         <section class="footer">
+         <div class="foots">
+             <div class="foot1">
+                 <div class="address">
+                     <p>About MAVRIC</p>
+                     <p>Mitchell Building, Suite 2130 
+                         <br>
+                         College Park, MD 20742
+                         <br>
+                         mavric@umd.edu
+                         <br>
+                         +1 301-405-2924
+                     </p>
+                     <a class="button outline" href="mailto:mavric@umd.edu?Subject=General%20Inquiry">Contact Us</a>
+                 </div>
+             </div>
+             <div class="foot2">
+                 <div class="follow">
+                     <p>Follow Us</p>
+                     <div class="social">
+                         <a href="https://www.facebook.com/UnivofMaryland/" target="#"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://twitter.com/UMDMAVRIC"><i class="fab fa-twitter"></i></a>
+                         <a href="https://www.instagram.com/umdmavric/"><i class="fab fa-instagram"></i></a>
+                         <a href="https://mavric.umd.edu/funding-and-events-archive"><i class="far fa-envelope"></i></a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+     </body>
+     </html>
+     

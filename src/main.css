@@ -6,6 +6,9 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    font-family: 'Roboto';
+}
 a {
     color: white;
     cursor: pointer;
@@ -459,6 +462,75 @@ i.down {
     }
   }
   
+  /* Schedule */
+
+  .schedule {
+      /* height: 80vh; */
+      padding-bottom: 50px; 
+  }
+  .schedule > p {
+    font-size: 2em;
+    font-weight: 500;
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+
+  .date_sel {
+    display: flex;
+    justify-content: center;
+  }
+
+  .date_ev {
+      font-size: 1.5em !important;
+      font-weight: 500;
+      padding-top: 50px;
+      
+  }
+
+  .table_ev {
+    margin: 0 auto;
+  }
+
+  .head_ev {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .card_ev {
+      display: flex;
+      justify-content: center;
+      background: white;
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 15px;
+      border-radius: 4px;
+      margin-top: 10px;
+  }
+
+  .card_ev > p {
+    width: 200px;
+  }
+
+  .card_ev p:first-child {
+    font-size: 1.25em;
+    color: #F7941D;
+    font-weight: 700;
+    width: 150px;
+  }
+
+  .card_ev:nth-child(2n) p:first-child {
+    color: #666666;
+  }
+
+  .card_ev p:nth-child(2) {
+    width: 300px;
+    margin-left: 30px;
+  }
+
+  .card_ev p:first-child {
+    border-right: 3px solid #191919;
+  }
+
   /* sponsor */
 
   .sponsor p:nth-child(1) {

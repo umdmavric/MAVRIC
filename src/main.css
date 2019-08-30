@@ -515,7 +515,7 @@ i.down {
     font-size: 1.25em;
     color: #F7941D;
     font-weight: 700;
-    width: 150px;
+    max-width: 150px;
   }
 
   .card_ev:nth-child(2n) p:first-child {
@@ -858,6 +858,18 @@ i.down {
     .cards a {
         margin: 0;
     }
+
+    .schedule > p {
+        padding-left: 40px;
+    }
+    .card_ev p:first-child {
+        font-size: 1em;
+    }
+
+    .card_ev p:nth-child(2) {
+        font-size: 0.85em;
+    }
+
 
     .sponsor p:nth-child(1) {
         padding-left: 40px;

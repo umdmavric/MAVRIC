@@ -54,6 +54,8 @@ for (let i = 0;i<nav.children.length;i++) {
             jump('.prices')
         if(nav.children[i].innerHTML == "Speakers")
             jump('.speakers')
+        if(nav.children[i].innerHTML == "Schedule")
+            jump('.schedule')
     })
 }
 

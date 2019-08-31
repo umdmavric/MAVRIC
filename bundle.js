@@ -17320,6 +17320,7 @@ for (let i = 0; i < nav.children.length; i++) {
     if (nav.children[i].innerHTML == "About") (0, _jump.default)('.about');
     if (nav.children[i].innerHTML == "Prices") (0, _jump.default)('.prices');
     if (nav.children[i].innerHTML == "Speakers") (0, _jump.default)('.speakers');
+    if (nav.children[i].innerHTML == "Schedule") (0, _jump.default)('.schedule');
   });
 }
 

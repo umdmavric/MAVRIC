@@ -202,4 +202,3 @@ speakers.forEach((element) => {
         window.location.href= `/src/pages/${name.replace(/ /g,'')}.html`
     })
 })
-

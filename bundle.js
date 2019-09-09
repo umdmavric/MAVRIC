@@ -17471,8 +17471,6 @@ fetch(url).then(resp => {
           [el.fields.Name]: el.fields.Company
         });
       }
-
-      console.log(presentation);
     });
   });
 });

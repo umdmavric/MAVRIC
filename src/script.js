@@ -220,8 +220,8 @@ fetch(url)
             else {
                 presentation[el.fields.PresentationTitle].push({[el.fields.Name]:el.fields.Company})
             }
-                console.log(presentation)
         })
+        
         
     })
 })

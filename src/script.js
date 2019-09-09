@@ -202,3 +202,26 @@ speakers.forEach((element) => {
         window.location.href= `/src/pages/${name.replace(/ /g,'')}.html`
     })
 })
+
+let presentation = {}
+let dup = []
+console.log(presentation)
+
+fetch(url)
+.then((resp) => {
+    resp.json().then((data) => {
+        console.log(data.records)
+        data.records.forEach((el) => {
+            if(!dup.includes(el.fields.PresentationTitle)) {
+                let present = el.fields.PresentationTitle
+                presentation[present] = [{[el.fields.Name]:el.fields.Company}]
+                dup.push(present)
+            }
+            else {
+                presentation[el.fields.PresentationTitle].push({[el.fields.Name]:el.fields.Company})
+            }
+                console.log(presentation)
+        })
+        
+    })
+})

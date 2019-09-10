@@ -21,6 +21,41 @@
          margin: 0;
          overflow-x: hidden;
      }
+
+     .header {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .main_image {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .nav-right, .small {
+        display: none;
+    }
+    
+    .links a {
+        margin-right: 20px;
+        color: black;
+    }
+    
+    .image_not_active {
+        display: none;
+    }
+    
+    .expo {
+        display: none;
+    }
+    
+    i.down {
+        display: none;
+    }
      
      .content {
          margin-bottom: 200px;
@@ -98,7 +133,7 @@
          color: white !important;
      }
  
-     a {
+     .social a {
          color: white !important;
      }
    
@@ -124,6 +159,91 @@
      }
      
      @media (max-width:768px) {
+
+        .main_image {
+            display: block;
+        }
+
+        .modal {
+            display: none;
+        }
+    
+        .row {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    
+        .big {
+            display: none;
+        }
+        
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            -webkit-box-pack: end;
+        }
+    
+        .small {
+            height: 100%;
+        }
+    
+        .mob_links {
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #333333;
+            z-index: 2;
+            margin: 0;
+            right: 0;
+            opacity: 0.99;
+        }
+    
+        .small_active {
+            display: block;
+        }
+    
+        .mob_links a {
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .hamburger {
+            z-index: 4;
+        }
+    
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: #fff !important;
+            width: 30px !important;
+        }
+    
+        .hamburger-box {
+            width: 30px !important;
+            height: 14px !important;
+        }
+    
+        .box {
+            padding-top: 20px;
+            height: 350px;
+        }
+    
+        .head_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .head_content > p {
+            color: #fff;
+            font-size: 1.1em;
+            position: relative;
+            top: 10px;
+        }
+
         .row {
             justify-content: center !important;
         }
@@ -148,14 +268,18 @@
             margin: 0 auto;
             font-size: 1.5em;
             text-align:center;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .info {
             margin: 0 auto;
             font-size: 1.25em;
-            text-align:center;
         }
+
+        .content {
+            margin-top: 0;
+        }
+
         .foots {
            display: flex;
            flex-direction: column;
@@ -180,6 +304,29 @@
        }
      }
      </style>
+     <div class="header">
+        <img src="../../assets/images/Main_Wide_web.jpg" class="main_image">
+                <nav class="nav">
+                    <div class="nav-center big">
+                        <div class="tabs links">
+                            <a href = "https://mavricconference.umd.edu/#">About</a>
+                            <a href = "https://mavricconference.umd.edu/#">Speakers</a>
+                            <a href= "https://mavric.umd.edu/mavric-conference-2018">Conference 2018</a>
+                            <a href = "https://mavricconference.umd.edu/#">Schedule</a>
+                            <a href = "https://mavricconference.umd.edu/#">Prices</a>
+                        </div>
+                    </div>
+                    <div class="nav-center small">
+                        <div class="mob_links">
+                            <a href = "https://mavricconference.umd.edu/#">About</a>
+                            <a href = "https://mavricconference.umd.edu/#">Speakers</a>
+                            <a href= "https://mavric.umd.edu/mavric-conference-2018">Conference 2018</a>
+                            <a href = "https://mavricconference.umd.edu/#">Schedule</a>
+                            <a href = "https://mavricconference.umd.edu/#">Prices</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
          <section class="content">
              <p class="project">Creating Immersive VR for Language Learning: Lessons Learned </p>
              <p class="name">Svetlana V. Cook --National Foreign Language Center at UMD</p>
@@ -193,7 +340,18 @@
                      <p class="info">A team from UMD’s National Foreign Language Center, made up of a second language acquisition expert, a web applications developer, and a multimedia specialist, describes its year-long VR journey. It started with a dream of building a language app and later culminated in a functional prototype of an immersive language learning experience for K-12 students learning less-commonly taught languages. The talk touches upon the challenges of the development and piloting process and explores what a team without prior VR development experience should be prepared to face in creating VR content for K-12 users.</p>
                      <p class="title">Bio</p>
                      <p class="info">Svetlana V. Cook, PhD, is a researcher at the National Foreign Language Center at UMD. As an expert in second language acquisition, she develops effective and engaging instructional products for VR and other digital media. </p>
+                     
                  </div>
+                 <p><a href="https://mavricconference.umd.edu/#" style = "margin-top: 50px;
+                 position: relative;
+                 top: 70px;
+                 right: 0px;
+                 color: #333333;
+                 border: 2px solid #666666;
+                 margin: 0 auto;
+                 border-radius: 4px;
+                 padding: 10px;
+                 width: 150px;" >Home</a></p>
              </div>
          </section>
          <section class="footer">

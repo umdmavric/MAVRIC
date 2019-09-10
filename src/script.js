@@ -207,6 +207,39 @@ let presentation = {}
 let dup = []
 console.log(presentation)
 
+let sessionEntry = (title, name) => {
+    let title_html = `
+        <div class="pres_title">
+            <p>${title}</p>
+        </div>
+    `
+    let pres_html = `
+        
+    `
+    let comp_html = `
+        
+    `
+
+    name.forEach((el) => {
+        let entries = Object.entries(el)
+        for(const [name, comp] of entries) {
+            pres_html+=`<p>${name}</p>`
+            comp_html+=`<p>${comp}</p>`
+        }
+    })
+    let card_html = `
+        <div class="ses_card">
+            ${title_html}
+            <div class="pres_name">
+                ${pres_html}
+            </div>
+            <div class="pres_com">
+                ${comp_html}
+            </div>
+        </div>
+    `
+    document.querySelector('.table').innerHTML+= card_html
+}
 fetch(url)
 .then((resp) => {
     resp.json().then((data) => {
@@ -221,7 +254,10 @@ fetch(url)
                 presentation[el.fields.PresentationTitle].push({[el.fields.Name]:el.fields.Company})
             }
         })
-        
-        
+        console.log(presentation)
+        let entries = Object.entries(presentation)
+        for(const [title, name] of entries) {
+            sessionEntry(title,name)
+        }
     })
 })

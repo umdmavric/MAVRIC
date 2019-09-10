@@ -21,6 +21,41 @@
          margin: 0;
          overflow-x: hidden;
      }
+
+     .header {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .main_image {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .nav-right, .small {
+        display: none;
+    }
+    
+    .links a {
+        margin-right: 20px;
+        color: black;
+    }
+    
+    .image_not_active {
+        display: none;
+    }
+    
+    .expo {
+        display: none;
+    }
+    
+    i.down {
+        display: none;
+    }
      
      .content {
          margin-bottom: 200px;
@@ -98,7 +133,7 @@
          color: white !important;
      }
  
-     a {
+     .social a {
          color: white !important;
      }
    
@@ -124,6 +159,91 @@
      }
      
      @media (max-width:768px) {
+
+        .main_image {
+            display: block;
+        }
+
+        .modal {
+            display: none;
+        }
+    
+        .row {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    
+        .big {
+            display: none;
+        }
+        
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            -webkit-box-pack: end;
+        }
+    
+        .small {
+            height: 100%;
+        }
+    
+        .mob_links {
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #333333;
+            z-index: 2;
+            margin: 0;
+            right: 0;
+            opacity: 0.99;
+        }
+    
+        .small_active {
+            display: block;
+        }
+    
+        .mob_links a {
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .hamburger {
+            z-index: 4;
+        }
+    
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: #fff !important;
+            width: 30px !important;
+        }
+    
+        .hamburger-box {
+            width: 30px !important;
+            height: 14px !important;
+        }
+    
+        .box {
+            padding-top: 20px;
+            height: 350px;
+        }
+    
+        .head_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .head_content > p {
+            color: #fff;
+            font-size: 1.1em;
+            position: relative;
+            top: 10px;
+        }
+
         .row {
             justify-content: center !important;
         }
@@ -148,14 +268,18 @@
             margin: 0 auto;
             font-size: 1.5em;
             text-align:center;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .info {
             margin: 0 auto;
             font-size: 1.25em;
-            text-align:center;
         }
+
+        .content {
+            margin-top: 0;
+        }
+
         .foots {
            display: flex;
            flex-direction: column;
@@ -180,6 +304,29 @@
        }
      }
      </style>
+     <div class="header">
+        <img src="../../assets/images/Main_Wide_web.jpg" class="main_image">
+                <nav class="nav">
+                    <div class="nav-center big">
+                        <div class="tabs links">
+                            <a href = "https://mavricconference.umd.edu/#">About</a>
+                            <a href = "https://mavricconference.umd.edu/#">Speakers</a>
+                            <a href= "https://mavric.umd.edu/mavric-conference-2018">Conference 2018</a>
+                            <a href = "https://mavricconference.umd.edu/#">Schedule</a>
+                            <a href = "https://mavricconference.umd.edu/#">Prices</a>
+                        </div>
+                    </div>
+                    <div class="nav-center small">
+                        <div class="mob_links">
+                            <a href = "https://mavricconference.umd.edu/#">About</a>
+                            <a href = "https://mavricconference.umd.edu/#">Speakers</a>
+                            <a href= "https://mavric.umd.edu/mavric-conference-2018">Conference 2018</a>
+                            <a href = "https://mavricconference.umd.edu/#">Schedule</a>
+                            <a href = "https://mavricconference.umd.edu/#">Prices</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
          <section class="content">
              <p class="project">Visual Culture, Experience design and Social ImpactL Leveraging Augmented & Mixed Reality in Art and Immersive Storytelling </p>
              <p class="name">Bianca Jackson --Jax Digital, LLC. and BrickRose Exchange</p>
@@ -193,7 +340,18 @@
                      <p class="info">Our query is an exploration of how using Augmented Reality and Mixed Reality for consuming art, impacts the art viewing experience for the viewer. Have you ever thought about ways to make art more accessible or more engaging? Thought about how to help viewers connect with the artists, the subject or subject matter(s) more deeply when viewing art? If so, this session will intrigue you. Using AR to bring art to spaces with no art and using MR to visualize birth stories of African American women, we reveal through these projects different techniques and software in XR that can be leveraged to make social impact and increase the number of accessible and meaningful immersive experiences by intersecting culture, art and technology. We will share our experience designs, design principles, inquiries, key takeaways, themes and insights of our exploration with our attendees. Further, we’ll provide tips, best practices and DIY techniques inspiring attendees to go beyond art viewing to art making with immersive storytelling and immersive design. </p>
                      <p class="title">Bio</p>
                      <p class="info">Bianca is a storyteller, entrepreneur and the visiting Personal Branding Instructor for Rutgers University’s Professional Women Career Development program speaking nationally at conferences, universities and corporations helping women define and create personal brands. She has transitioned from business analyst to tech project manager to social entrepreneur and is the founder of Jax Digital, LLC and BrickRose Exchange.</p>
+                     
                  </div>
+                 <p><a href="https://mavricconference.umd.edu/#" style = "margin-top: 50px;
+                 position: relative;
+                 top: 70px;
+                 right: 0px;
+                 color: #333333;
+                 border: 2px solid #666666;
+                 margin: 0 auto;
+                 border-radius: 4px;
+                 padding: 10px;
+                 width: 150px;" >Home</a></p>
              </div>
          </section>
          <section class="footer">

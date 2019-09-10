@@ -471,8 +471,13 @@ i.down {
     padding-left: 100px;
   }
 
-  .table {
-      margin-top: 40px;
+  table {
+      width: 80%;
+      margin: 0 auto;
+  }
+
+  td {
+      max-width: 300px;
   }
   
   .headings {

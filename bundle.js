@@ -17459,9 +17459,9 @@ console.log(presentation);
 
 let sessionEntry = (title, name) => {
   let title_html = `
-        <div class="pres_title">
+        <td>
             <p>${title}</p>
-        </div>
+        </td>
     `;
   let pres_html = `
         
@@ -17477,18 +17477,18 @@ let sessionEntry = (title, name) => {
       comp_html += `<p>${comp}</p>`;
     }
   });
-  let card_html = `
-        <div class="ses_card">
+  let table_html = `
+        <tr class = "table_row">
             ${title_html}
-            <div class="pres_name">
+            <td>
                 ${pres_html}
-            </div>
-            <div class="pres_com">
+            </td>
+            <td>
                 ${comp_html}
-            </div>
-        </div>
+            </td>
+        </tr>
     `;
-  document.querySelector('.table').innerHTML += card_html;
+  document.querySelector('table').innerHTML += table_html;
 };
 
 fetch(url).then(resp => {

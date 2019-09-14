@@ -17506,12 +17506,13 @@ fetch(url).then(resp => {
           [el.fields.Name]: el.fields.Company
         });
       }
+
+      if (!presentation[el.fields.PresentationTitle].includes(el.fields.PresentationID)) presentation[el.fields.PresentationTitle].unshift(el.fields.PresentationID);
     });
-    console.log(presentation);
     let entries = Object.entries(presentation);
 
     for (const [title, name] of entries) {
-      sessionEntry(title, name);
+      if (title !== undefined) sessionEntry(title, name); // console.log(title,name)
     }
   });
 });

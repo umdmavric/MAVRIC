@@ -1,7 +1,7 @@
 import jump from 'jump.js'
 import slick from 'slick-carousel'
 import $ from 'jquery'
-import Glide from '@glidejs/glide'
+import Glide, {Controls} from '@glidejs/glide/dist/glide.modular.esm'
 import apiConfig from './apiKey'
 
 let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${apiConfig.apikey}`
@@ -134,7 +134,7 @@ let glide = new Glide('.glide', {
     bound: true
 })
 
-glide.mount()
+glide.mount({Controls})
 
 let cross = document.querySelector('.fa-times');
 
@@ -253,11 +253,14 @@ fetch(url)
             else {
                 presentation[el.fields.PresentationTitle].push({[el.fields.Name]:el.fields.Company})
             }
+            if(!presentation[el.fields.PresentationTitle].includes(el.fields.PresentationID))
+                presentation[el.fields.PresentationTitle].unshift(el.fields.PresentationID)
         })
-        console.log(presentation)
         let entries = Object.entries(presentation)
         for(const [title, name] of entries) {
-            sessionEntry(title,name)
+            if(title !== undefined)
+                sessionEntry(title,name)
+            // console.log(title,name)
         }
     })
 })

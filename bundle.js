@@ -4,6 +4,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Swipe = swipe;
+exports.Images = images;
+exports.Anchors = anchors;
+exports.Controls = controls;
+exports.Keyboard = keyboard;
+exports.Autoplay = autoplay;
+exports.Breakpoints = breakpoints;
 exports.default = void 0;
 
 /*!
@@ -2435,7 +2442,7 @@ var MOVE_EVENTS = ['touchmove', 'mousemove'];
 var END_EVENTS = ['touchend', 'touchcancel', 'mouseup', 'mouseleave'];
 var MOUSE_EVENTS = ['mousedown', 'mousemove', 'mouseup', 'mouseleave'];
 
-function Swipe(Glide, Components, Events) {
+function swipe(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -2708,7 +2715,7 @@ function Swipe(Glide, Components, Events) {
   return Swipe;
 }
 
-function Images(Glide, Components, Events) {
+function images(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -2764,7 +2771,7 @@ function Images(Glide, Components, Events) {
   return Images;
 }
 
-function Anchors(Glide, Components, Events) {
+function anchors(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -2922,7 +2929,7 @@ function Anchors(Glide, Components, Events) {
 var NAV_SELECTOR = '[data-glide-el="controls[nav]"]';
 var CONTROLS_SELECTOR = '[data-glide-el^="controls"]';
 
-function Controls(Glide, Components, Events) {
+function controls(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3104,7 +3111,7 @@ function Controls(Glide, Components, Events) {
   return Controls;
 }
 
-function Keyboard(Glide, Components, Events) {
+function keyboard(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3185,7 +3192,7 @@ function Keyboard(Glide, Components, Events) {
   return Keyboard;
 }
 
-function Autoplay(Glide, Components, Events) {
+function autoplay(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3346,7 +3353,7 @@ function sortBreakpoints(points) {
   return {};
 }
 
-function Breakpoints(Glide, Components, Events) {
+function breakpoints(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3434,7 +3441,6 @@ function Breakpoints(Glide, Components, Events) {
 }
 
 var COMPONENTS = {
-  // Required
   Html: Html,
   Translate: Translate,
   Transition: Transition,
@@ -3446,15 +3452,7 @@ var COMPONENTS = {
   Clones: Clones,
   Resize: Resize,
   Build: Build,
-  Run: Run,
-  // Optional
-  Swipe: Swipe,
-  Images: Images,
-  Anchors: Anchors,
-  Controls: Controls,
-  Keyboard: Keyboard,
-  Autoplay: Autoplay,
-  Breakpoints: Breakpoints
+  Run: Run
 };
 
 var Glide$1 = function (_Core) {
@@ -17271,9 +17269,11 @@ var _slickCarousel = _interopRequireDefault(require("slick-carousel"));
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
-var _glide = _interopRequireDefault(require("@glidejs/glide"));
+var _glideModular = _interopRequireWildcard(require("@glidejs/glide/dist/glide.modular.esm"));
 
 var _apiKey = _interopRequireDefault(require("./apiKey"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17385,14 +17385,16 @@ window.addEventListener("scroll", function (event) {
     sub.style.visibility = "visible";
   }
 });
-let glide = new _glide.default('.glide', {
+let glide = new _glideModular.default('.glide', {
   type: 'slider',
   autoplay: 2000,
   rewind: true,
   perView: 4,
   bound: true
 });
-glide.mount();
+glide.mount({
+  Controls: _glideModular.Controls
+});
 let cross = document.querySelector('.fa-times');
 cross.addEventListener('click', () => {
   document.querySelector('.modal').classList.remove('slideInRight');
@@ -17460,7 +17462,7 @@ console.log(presentation);
 let sessionEntry = (title, name) => {
   let title_html = `
         <td>
-            <p>${title}</p>
+            <p>${name[0]}</p>
         </td>
     `;
   let pres_html = `
@@ -17470,13 +17472,18 @@ let sessionEntry = (title, name) => {
         
     `;
   name.forEach(el => {
-    let entries = Object.entries(el);
-
-    for (const [name, comp] of entries) {
-      pres_html += `<p>${name}</p>`;
-      comp_html += `<p>${comp}</p>`;
-    }
+    console.log(el); // let entries = Object.entries(el)
+    // for(const [name, comp] of entries) {
+    //     pres_html+=`<p>${name}</p>`
+    //     comp_html+=`<p>${comp}</p>`
+    // }
   });
+
+  for (let i = 1; i < name.length; i++) {
+    pres_html += `<p>${Object.keys(name[i])}</p>`;
+    comp_html += `<p>${name[i][Object.keys(name[i])]}</p>`;
+  }
+
   let table_html = `
         <tr class = "table_row">
             ${title_html}
@@ -17495,26 +17502,26 @@ fetch(url).then(resp => {
   resp.json().then(data => {
     console.log(data.records);
     data.records.forEach(el => {
-      if (!dup.includes(el.fields.PresentationTitle)) {
-        let present = el.fields.PresentationTitle;
-        presentation[present] = [{
+      if (!dup.includes(el.fields.PresentationID)) {
+        let present = el.fields.PresentationID;
+        presentation[present] = [el.fields.PresentationTitle, {
           [el.fields.Name]: el.fields.Company
         }];
         dup.push(present);
       } else {
-        presentation[el.fields.PresentationTitle].push({
+        presentation[el.fields.PresentationID].push({
           [el.fields.Name]: el.fields.Company
         });
       }
-
-      if (!presentation[el.fields.PresentationTitle].includes(el.fields.PresentationID)) presentation[el.fields.PresentationTitle].unshift(el.fields.PresentationID);
     });
+    console.log(presentation);
     let entries = Object.entries(presentation);
 
     for (const [title, name] of entries) {
+      console.log(title, name);
       if (title !== undefined) sessionEntry(title, name); // console.log(title,name)
     }
   });
 });
 
-},{"./apiKey":5,"@glidejs/glide":1,"jquery":2,"jump.js":3,"slick-carousel":4}]},{},[6]);
+},{"./apiKey":5,"@glidejs/glide/dist/glide.modular.esm":1,"jquery":2,"jump.js":3,"slick-carousel":4}]},{},[6]);

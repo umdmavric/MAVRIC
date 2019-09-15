@@ -210,7 +210,7 @@ console.log(presentation)
 let sessionEntry = (title, name) => {
     let title_html = `
         <td>
-            <p>${title}</p>
+            <p>${name[0]}</p>
         </td>
     `
     let pres_html = `
@@ -221,12 +221,19 @@ let sessionEntry = (title, name) => {
     `
 
     name.forEach((el) => {
-        let entries = Object.entries(el)
-        for(const [name, comp] of entries) {
-            pres_html+=`<p>${name}</p>`
-            comp_html+=`<p>${comp}</p>`
-        }
+        console.log(el)
+        // let entries = Object.entries(el)
+        
+        // for(const [name, comp] of entries) {
+        //     pres_html+=`<p>${name}</p>`
+        //     comp_html+=`<p>${comp}</p>`
+        // }
     })
+
+    for(let i =1;i<name.length;i++) {
+        pres_html+= `<p>${Object.keys(name[i])}</p>`
+        comp_html+= `<p>${name[i][Object.keys(name[i])]}</p>`
+    }
     let table_html = `
         <tr class = "table_row">
             ${title_html}
@@ -245,19 +252,19 @@ fetch(url)
     resp.json().then((data) => {
         console.log(data.records)
         data.records.forEach((el) => {
-            if(!dup.includes(el.fields.PresentationTitle)) {
-                let present = el.fields.PresentationTitle
-                presentation[present] = [{[el.fields.Name]:el.fields.Company}]
+            if(!dup.includes(el.fields.PresentationID)) {
+                let present = el.fields.PresentationID
+                presentation[present] = [el.fields.PresentationTitle,{[el.fields.Name]:el.fields.Company}]
                 dup.push(present)
             }
             else {
-                presentation[el.fields.PresentationTitle].push({[el.fields.Name]:el.fields.Company})
+                presentation[el.fields.PresentationID].push({[el.fields.Name]:el.fields.Company})
             }
-            if(!presentation[el.fields.PresentationTitle].includes(el.fields.PresentationID))
-                presentation[el.fields.PresentationTitle].unshift(el.fields.PresentationID)
         })
+        console.log(presentation)
         let entries = Object.entries(presentation)
         for(const [title, name] of entries) {
+            console.log(title,name)
             if(title !== undefined)
                 sessionEntry(title,name)
             // console.log(title,name)

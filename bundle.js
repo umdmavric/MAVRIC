@@ -4,13 +4,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Swipe = swipe;
-exports.Images = images;
-exports.Anchors = anchors;
-exports.Controls = controls;
-exports.Keyboard = keyboard;
-exports.Autoplay = autoplay;
-exports.Breakpoints = breakpoints;
 exports.default = void 0;
 
 /*!
@@ -2442,7 +2435,7 @@ var MOVE_EVENTS = ['touchmove', 'mousemove'];
 var END_EVENTS = ['touchend', 'touchcancel', 'mouseup', 'mouseleave'];
 var MOUSE_EVENTS = ['mousedown', 'mousemove', 'mouseup', 'mouseleave'];
 
-function swipe(Glide, Components, Events) {
+function Swipe(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -2715,7 +2708,7 @@ function swipe(Glide, Components, Events) {
   return Swipe;
 }
 
-function images(Glide, Components, Events) {
+function Images(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -2771,7 +2764,7 @@ function images(Glide, Components, Events) {
   return Images;
 }
 
-function anchors(Glide, Components, Events) {
+function Anchors(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -2929,7 +2922,7 @@ function anchors(Glide, Components, Events) {
 var NAV_SELECTOR = '[data-glide-el="controls[nav]"]';
 var CONTROLS_SELECTOR = '[data-glide-el^="controls"]';
 
-function controls(Glide, Components, Events) {
+function Controls(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3111,7 +3104,7 @@ function controls(Glide, Components, Events) {
   return Controls;
 }
 
-function keyboard(Glide, Components, Events) {
+function Keyboard(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3192,7 +3185,7 @@ function keyboard(Glide, Components, Events) {
   return Keyboard;
 }
 
-function autoplay(Glide, Components, Events) {
+function Autoplay(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3353,7 +3346,7 @@ function sortBreakpoints(points) {
   return {};
 }
 
-function breakpoints(Glide, Components, Events) {
+function Breakpoints(Glide, Components, Events) {
   /**
    * Instance of the binder for DOM Events.
    *
@@ -3441,6 +3434,7 @@ function breakpoints(Glide, Components, Events) {
 }
 
 var COMPONENTS = {
+  // Required
   Html: Html,
   Translate: Translate,
   Transition: Transition,
@@ -3452,7 +3446,15 @@ var COMPONENTS = {
   Clones: Clones,
   Resize: Resize,
   Build: Build,
-  Run: Run
+  Run: Run,
+  // Optional
+  Swipe: Swipe,
+  Images: Images,
+  Anchors: Anchors,
+  Controls: Controls,
+  Keyboard: Keyboard,
+  Autoplay: Autoplay,
+  Breakpoints: Breakpoints
 };
 
 var Glide$1 = function (_Core) {
@@ -17269,11 +17271,9 @@ var _slickCarousel = _interopRequireDefault(require("slick-carousel"));
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
-var _glideModular = _interopRequireWildcard(require("@glidejs/glide/dist/glide.modular.esm"));
+var _glide = _interopRequireDefault(require("../node_modules/@glidejs/glide"));
 
 var _apiKey = _interopRequireDefault(require("./apiKey"));
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17385,16 +17385,15 @@ window.addEventListener("scroll", function (event) {
     sub.style.visibility = "visible";
   }
 });
-let glide = new _glideModular.default('.glide', {
+let glide = new _glide.default('.glide', {
   type: 'slider',
   autoplay: 2000,
   rewind: true,
   perView: 4,
-  bound: true
+  bound: true,
+  hoverpause: false
 });
-glide.mount({
-  Controls: _glideModular.Controls
-});
+glide.mount();
 let cross = document.querySelector('.fa-times');
 cross.addEventListener('click', () => {
   document.querySelector('.modal').classList.remove('slideInRight');
@@ -17524,4 +17523,4 @@ fetch(url).then(resp => {
   });
 });
 
-},{"./apiKey":5,"@glidejs/glide/dist/glide.modular.esm":1,"jquery":2,"jump.js":3,"slick-carousel":4}]},{},[6]);
+},{"../node_modules/@glidejs/glide":1,"./apiKey":5,"jquery":2,"jump.js":3,"slick-carousel":4}]},{},[6]);

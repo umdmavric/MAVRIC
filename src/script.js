@@ -1,7 +1,7 @@
 import jump from 'jump.js'
 import slick from 'slick-carousel'
 import $ from 'jquery'
-import Glide, {Controls} from '@glidejs/glide/dist/glide.modular.esm'
+import Glide from '../node_modules/@glidejs/glide'
 import apiConfig from './apiKey'
 
 let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${apiConfig.apikey}`
@@ -131,10 +131,11 @@ let glide = new Glide('.glide', {
     autoplay:2000,
     rewind: true,
     perView: 4,
-    bound: true
+    bound: true,
+    hoverpause: false
 })
 
-glide.mount({Controls})
+glide.mount()
 
 let cross = document.querySelector('.fa-times');
 

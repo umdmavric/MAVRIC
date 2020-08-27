@@ -55,8 +55,10 @@ a {
 
 .head {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
+    /* background-image: url("../assets/images/MAVRIC_2020_Cyber_newsletter_final_jpg.jpg");
+    background-size: cover; */
 }
 
 .head > img {

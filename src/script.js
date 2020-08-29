@@ -4,8 +4,7 @@ import $ from 'jquery'
 import Glide from '../node_modules/@glidejs/glide'
 import apiConfig from './apiKey'
 
-let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${apiConfig.apikey}`
-
+let url = `https://api.airtable.com/v0/appoL7vtaPeVCzMrl/MAVRIC%20Speakers?api_key=${apiConfig.apikey}`
 
 let head = document.querySelector('.head');
 head.style.height = screen.height/2;
@@ -109,9 +108,9 @@ hamburger.addEventListener("click",()=>{
     
 })
 
-document.querySelector('.available').addEventListener('click', () => {
-    jump('.sponsor')
-})
+// document.querySelector('.available').addEventListener('click', () => {
+//     jump('.sponsor')
+// })
 
 document.querySelector('.speak').addEventListener('click', () => {
     jump('.speakers')
@@ -137,13 +136,13 @@ let glide = new Glide('.glide', {
 
 glide.mount()
 
-let cross = document.querySelector('.fa-times');
+// let cross = document.querySelector('.fa-times');
 
-cross.addEventListener('click', () => {
-    document.querySelector('.modal').classList.remove('slideInRight');
-    document.querySelector('.modal').classList.add('slideOutRight');
-    document.querySelector('.modal').classList.remove('delay-2s');
-})
+// cross.addEventListener('click', () => {
+//     document.querySelector('.modal').classList.remove('slideInRight');
+//     document.querySelector('.modal').classList.add('slideOutRight');
+//     document.querySelector('.modal').classList.remove('delay-2s');
+// })
 
 let mobile_display = 
 `

@@ -17277,7 +17277,7 @@ var _apiKey = _interopRequireDefault(require("./apiKey"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${_apiKey.default.apikey}`;
+let url = `https://api.airtable.com/v0/appoL7vtaPeVCzMrl/MAVRIC%20Speakers?api_key=${_apiKey.default.apikey}`;
 let head = document.querySelector('.head');
 head.style.height = screen.height / 2;
 console.log(screen.height);
@@ -17370,10 +17370,10 @@ hamburger.addEventListener("click", () => {
     nav_mob.className += "small";
     hcheck = true;
   }
-});
-document.querySelector('.available').addEventListener('click', () => {
-  (0, _jump.default)('.sponsor');
-});
+}); // document.querySelector('.available').addEventListener('click', () => {
+//     jump('.sponsor')
+// })
+
 document.querySelector('.speak').addEventListener('click', () => {
   (0, _jump.default)('.speakers');
 });
@@ -17393,13 +17393,13 @@ let glide = new _glide.default('.glide', {
   bound: true,
   hoverpause: false
 });
-glide.mount();
-let cross = document.querySelector('.fa-times');
-cross.addEventListener('click', () => {
-  document.querySelector('.modal').classList.remove('slideInRight');
-  document.querySelector('.modal').classList.add('slideOutRight');
-  document.querySelector('.modal').classList.remove('delay-2s');
-});
+glide.mount(); // let cross = document.querySelector('.fa-times');
+// cross.addEventListener('click', () => {
+//     document.querySelector('.modal').classList.remove('slideInRight');
+//     document.querySelector('.modal').classList.add('slideOutRight');
+//     document.querySelector('.modal').classList.remove('delay-2s');
+// })
+
 let mobile_display = `
     <div class = "row">
         <div class = "col left-side">

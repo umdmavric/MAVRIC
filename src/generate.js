@@ -6,7 +6,8 @@ let mobile_display =
         </div>
     </div>
 `
-let url = `https://api.airtable.com/v0/appiwCrmeV2rljaOH/Speakers?api_key=${apiConfig.apikey}`
+let url = `https://api.airtable.com/v0/appoL7vtaPeVCzMrl/MAVRIC%20Speakers?api_key=${apiConfig.apikey}`
+
 
 console.log(document.querySelector('.head'))
 let mobile  = (width) => {

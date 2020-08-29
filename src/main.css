@@ -57,8 +57,11 @@ a {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    /* background-image: url("../assets/images/MAVRIC_2020_Cyber_newsletter_final_jpg.jpg");
-    background-size: cover; */
+ 
+}
+
+.mobile_image {
+    display: none;
 }
 
 .head > img {
@@ -605,6 +608,20 @@ i.down {
       margin-left: 100px;
   }
 
+  /* thanks */
+
+  .sponsor_thanks p:nth-child(1) {
+    font-size: 2em;
+    font-weight: 500;
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+
+  .sponsor_thanks > img {
+      margin-top: 30px;
+      padding-left: 100px;
+  }
+
   /* footer */
 
   .footer {
@@ -709,8 +726,17 @@ i.down {
         display: none;
     }
 
+    .head_content {
+        height: 120%;
+    }
+
     .head {
         background-color:#191919; 
+        background-image: url(/assets/images/Artboard\ 2@5x2.png);
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: center;
     }
 
     .head_content > img {
@@ -938,6 +964,15 @@ i.down {
 
     .sponsor .row .col ul {
         margin-left: 40px
+    }
+
+    .sponsor_thanks p:nth-child(1) {
+        padding-left: 40px;
+    }
+
+    .sponsor_thanks > img {
+        padding-left: 0px !important;
+        width: 100%;
     }
 
     .foots {

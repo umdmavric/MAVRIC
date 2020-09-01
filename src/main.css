@@ -105,8 +105,6 @@ a {
 
 .head_content>img {
     width: 45%;
-    /* position: relative;
-    top: 200px; */
     margin: 0 auto;
 }
 
@@ -809,6 +807,10 @@ td {
         background-position-y: center;
     }
 
+    .register {
+        display: none;
+    }
+
     .head_content>img {
         width: 75%;
         margin: 0 auto;
@@ -826,6 +828,11 @@ td {
 
     .big {
         display: none;
+    }
+
+    .nav {
+        background-color: transparent;
+        box-shadow: none;
     }
 
     .nav-right {

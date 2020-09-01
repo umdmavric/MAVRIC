@@ -17318,7 +17318,7 @@ for (let i = 0; i < nav.children.length; i++) {
   nav.children[i].addEventListener("click", () => {
     console.log(nav.children[i].innerHTML);
     if (nav.children[i].innerHTML == "About") (0, _jump.default)('.about');
-    if (nav.children[i].innerHTML == "Prices") (0, _jump.default)('.prices');
+    if (nav.children[i].innerHTML == "Registration") (0, _jump.default)('.registration');
     if (nav.children[i].innerHTML == "Speakers") (0, _jump.default)('.speakers');
     if (nav.children[i].innerHTML == "Schedule") (0, _jump.default)('.schedule');
   });

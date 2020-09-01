@@ -61,14 +61,29 @@ a {
 
 }
 
-/* .register {
+.register {
     background-color: red;
     position: absolute;
-    width: 210px;
+    width: 12%;
     height: 75px;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     top: 75%;
-} */
+    left: 35%;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.register > i {
+    font-size: 2vw;
+}
+
+.register > a {
+    font-size: 2vw;
+}
 
 .mobile_image {
     display: none;

@@ -17374,7 +17374,7 @@ hamburger.addEventListener("click", () => {
 //     jump('.sponsor')
 // })
 
-document.querySelector('.speak').addEventListener('click', () => {
+document.querySelector('.gotospeak').addEventListener('click', () => {
   (0, _jump.default)('.speakers');
 });
 let sub = document.querySelector('.subscribe');

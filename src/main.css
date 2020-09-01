@@ -1037,6 +1037,14 @@ td {
         flex-direction: column;
     }
 
+    .registration  p:nth-child(1) {
+        padding-left: 40px;
+    }
+
+    .registration p:nth-child(2) {
+        padding-left: 40px;
+    }
+
     .sponsor p:nth-child(1) {
         padding-left: 40px;
     }
@@ -1056,6 +1064,16 @@ td {
     .sponsor_thanks>img {
         padding-left: 0px !important;
         width: 100%;
+    }
+
+    .spons_log {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spons_log > a {
+        margin-top: 50px;
     }
 
     .foots {

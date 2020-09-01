@@ -112,7 +112,7 @@ hamburger.addEventListener("click",()=>{
 //     jump('.sponsor')
 // })
 
-document.querySelector('.speak').addEventListener('click', () => {
+document.querySelector('.gotospeak').addEventListener('click', () => {
     jump('.speakers')
 })
 

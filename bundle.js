@@ -17321,6 +17321,7 @@ for (let i = 0; i < nav.children.length; i++) {
     if (nav.children[i].innerHTML == "Registration") (0, _jump.default)('.registration');
     if (nav.children[i].innerHTML == "Speakers") (0, _jump.default)('.speakers');
     if (nav.children[i].innerHTML == "Schedule") (0, _jump.default)('.schedule');
+    if (nav.children[i].innerHTML == "Schedule") (0, _jump.default)('.sponsor');
   });
 }
 
@@ -17354,6 +17355,27 @@ for (let i = 0; i < nav2.children.length; i++) {
       hamburger.className = "hamburger hamburger--spin";
       nav_mob.className += "small";
       (0, _jump.default)('.speakers');
+      hcheck = true;
+    }
+
+    if (nav2.children[i].innerHTML == "Sponsors") {
+      hamburger.className = "hamburger hamburger--spin";
+      nav_mob.className += "small";
+      (0, _jump.default)('.sponsor');
+      hcheck = true;
+    }
+
+    if (nav2.children[i].innerHTML == "Schedule") {
+      hamburger.className = "hamburger hamburger--spin";
+      nav_mob.className += "small";
+      (0, _jump.default)('.schedule');
+      hcheck = true;
+    }
+
+    if (nav2.children[i].innerHTML == "Registration") {
+      hamburger.className = "hamburger hamburger--spin";
+      nav_mob.className += "small";
+      (0, _jump.default)('.registration');
       hcheck = true;
     }
   });

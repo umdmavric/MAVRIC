@@ -63,14 +63,14 @@ a {
 .register {
     background-color: red;
     position: absolute;
-    width: 12%;
-    height: 75px;
+    width: 19%;
+    height: 8%;
     border-radius: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    top: 75%;
-    left: 35%;
+    top: 90vh;
+    left: 40%;
     color: white;
     text-align: center;
     cursor: pointer;

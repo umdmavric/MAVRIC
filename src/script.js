@@ -237,6 +237,9 @@ let sessionEntry = (title, name) => {
     let comp_html = `
         
     `
+    let time_html = `
+    
+    `
 
     name.forEach((el) => {
         console.log(el)
@@ -249,8 +252,15 @@ let sessionEntry = (title, name) => {
     })
 
     for (let i = 1; i < name.length; i++) {
+        console.log(name[i])
         pres_html += `<p>${Object.keys(name[i])}</p>`
-        comp_html += `<p>${name[i][Object.keys(name[i])]}</p>`
+        if(name[i][Object.keys(name[i])]) {
+            comp_html += `<p>${name[i][Object.keys(name[i])][0]}</p>`
+        }
+        if(name[i][Object.keys(name[i])]) {
+            let d = new Date(name[i][Object.keys(name[i])][1])
+            time_html += `<p>${d.toLocaleString()}</p>`
+        }
     }
     let table_html = `
         <tr class = "table_row">
@@ -260,6 +270,9 @@ let sessionEntry = (title, name) => {
             </td>
             <td>
                 ${comp_html}
+            </td>
+            <td>
+                ${time_html}
             </td>
         </tr>
     `
@@ -273,12 +286,12 @@ fetch(url)
                 if (!dup.includes(el.fields.PresentationID)) {
                     let present = el.fields.PresentationID
                     presentation[present] = [el.fields.PresentationTitle, {
-                        [el.fields.Name]: el.fields.Company
+                        [el.fields.Name]: [el.fields.Company, el.fields.Scheduled]
                     }]
                     dup.push(present)
                 } else {
                     presentation[el.fields.PresentationID].push({
-                        [el.fields.Name]: el.fields.Company
+                        [el.fields.Name]: [el.fields.Company, el.fields.Scheduled]
                     })
                 }
             })

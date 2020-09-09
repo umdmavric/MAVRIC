@@ -3,6 +3,7 @@ import slick from 'slick-carousel'
 import $ from 'jquery'
 import Glide from '../node_modules/@glidejs/glide'
 import apiConfig from './apiKey'
+import moment from 'moment-timezone'
 
 let url = `https://api.airtable.com/v0/appoL7vtaPeVCzMrl/MAVRIC%20Speakers?api_key=${apiConfig.apikey}`
 
@@ -258,8 +259,10 @@ let sessionEntry = (title, name) => {
             comp_html += `<p>${name[i][Object.keys(name[i])][0]}</p>`
         }
         if(name[i][Object.keys(name[i])]) {
-            let d = new Date(name[i][Object.keys(name[i])][1])
-            time_html += `<p>${d.toLocaleString()}</p>`
+            let d = new Date(name[i][Object.keys(name[i])][1]).toUTCString()
+            // d = moment(d)
+            console.log(d)
+            time_html += `<p>${d.substring(0,d.length-3)}</p>`
         }
     }
     let table_html = `

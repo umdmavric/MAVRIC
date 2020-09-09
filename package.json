@@ -16,7 +16,7 @@
     "@glidejs/glide": "^3.3.0",
     "browser-resolve": "^1.11.3",
     "concurrently": "^4.1.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jump.js": "^1.0.2",
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
